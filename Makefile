@@ -8,7 +8,7 @@
 PROG=myprog
 
 # Fichiers sources (NE PAS METTRE les .h mais seulement les .cpp)
-SOURCES=BaseObject.cpp Photo.cpp Video.cpp main.cpp
+SOURCES=BaseObject.cpp Photo.cpp Video.cpp Film.cpp main.cpp
 
 # Fichiers objets (ne pas modifier, sauf si l'extension n'est pas .cpp)
 OBJETS=${SOURCES:%.cpp=%.o}
@@ -43,7 +43,7 @@ ${PROG}: depend-${PROG} ${OBJETS}
 	${CXX} -o $@ ${LDFLAGS} ${OBJETS} ${LDLIBS}
 
 clean:
-	-@$(RM) *.o depend-${PROG} core 1>/dev/null 2>&1
+	-@$(RM) *~ *.o depend-${PROG} core 1>/dev/null 2>&1
 
 clean-all: clean
 	-@$(RM) ${PROG} 1>/dev/null 2>&1
