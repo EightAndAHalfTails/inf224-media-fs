@@ -1,0 +1,91 @@
+\hypertarget{classBaseObject}{\section{Base\-Object Class Reference}
+\label{classBaseObject}\index{Base\-Object@{Base\-Object}}
+}
+
+
+Base multimedia-\/type file object.  
+
+
+
+
+{\ttfamily \#include $<$Base\-Object.\-h$>$}
+
+Inheritance diagram for Base\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBaseObject}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBaseObject_ac9e64a371856dc974183c1b04bfdd0c9}{\hyperlink{classBaseObject_ac9e64a371856dc974183c1b04bfdd0c9}{Base\-Object} ()}\label{classBaseObject_ac9e64a371856dc974183c1b04bfdd0c9}
+
+\begin{DoxyCompactList}\small\item\em Parameterless Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classBaseObject_aef7d506580d526367abe614c614aaf43}{\hyperlink{classBaseObject_aef7d506580d526367abe614c614aaf43}{Base\-Object} (std\-::string, time\-\_\-t, std\-::string)}\label{classBaseObject_aef7d506580d526367abe614c614aaf43}
+
+\begin{DoxyCompactList}\small\item\em Parametered Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classBaseObject_a83eecfd3bdaffda4e6c7d0fb98747f96}{$\sim$\-Base\-Object} ()
+\begin{DoxyCompactList}\small\item\em Parameterless Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classBaseObject_a813ed6b0e98919c44c5ddf95495bfa2d}{std\-::string \hyperlink{classBaseObject_a813ed6b0e98919c44c5ddf95495bfa2d}{get\-Name} () const }\label{classBaseObject_a813ed6b0e98919c44c5ddf95495bfa2d}
+
+\begin{DoxyCompactList}\small\item\em Returns name of multimedia object (track name, movie title etc) \end{DoxyCompactList}\item 
+\hypertarget{classBaseObject_a1d9abdd27cea258333a27d505c57e857}{time\-\_\-t \hyperlink{classBaseObject_a1d9abdd27cea258333a27d505c57e857}{get\-Creation\-Date} () const }\label{classBaseObject_a1d9abdd27cea258333a27d505c57e857}
+
+\begin{DoxyCompactList}\small\item\em Returns date of creation as time\-\_\-t. \end{DoxyCompactList}\item 
+\hypertarget{classBaseObject_a46ce6977e2a06f0785aca14454df9d94}{std\-::string \hyperlink{classBaseObject_a46ce6977e2a06f0785aca14454df9d94}{get\-Path} () const }\label{classBaseObject_a46ce6977e2a06f0785aca14454df9d94}
+
+\begin{DoxyCompactList}\small\item\em Returns unix path (including filename) of object. \end{DoxyCompactList}\item 
+\hypertarget{classBaseObject_a3999488d0dd4e825641ece8f332385e1}{void \hyperlink{classBaseObject_a3999488d0dd4e825641ece8f332385e1}{set\-Name} (std\-::string)}\label{classBaseObject_a3999488d0dd4e825641ece8f332385e1}
+
+\begin{DoxyCompactList}\small\item\em Sets name of multimedia object (track name, movie title etc) \end{DoxyCompactList}\item 
+\hypertarget{classBaseObject_aeeb327051d61bd727722f583fa0bc41c}{void \hyperlink{classBaseObject_aeeb327051d61bd727722f583fa0bc41c}{set\-Creation\-Date} (time\-\_\-t)}\label{classBaseObject_aeeb327051d61bd727722f583fa0bc41c}
+
+\begin{DoxyCompactList}\small\item\em Sets date of creation as time\-\_\-t. \end{DoxyCompactList}\item 
+\hypertarget{classBaseObject_a06461859fe33fc77fee0b74dbbe1b57d}{void \hyperlink{classBaseObject_a06461859fe33fc77fee0b74dbbe1b57d}{set\-Path} (std\-::string)}\label{classBaseObject_a06461859fe33fc77fee0b74dbbe1b57d}
+
+\begin{DoxyCompactList}\small\item\em Sets unix path (including filename) of object. \end{DoxyCompactList}\item 
+\hypertarget{classBaseObject_aab08eee6684fdfa0852b1f914379b9c4}{virtual std\-::string \hyperlink{classBaseObject_aab08eee6684fdfa0852b1f914379b9c4}{to\-String} () const }\label{classBaseObject_aab08eee6684fdfa0852b1f914379b9c4}
+
+\begin{DoxyCompactList}\small\item\em Returns multi-\/line string containing formatted description of object. \end{DoxyCompactList}\item 
+void \hyperlink{classBaseObject_a9bad65dddde7dec1ea622edce664cc9f}{print} () const 
+\begin{DoxyCompactList}\small\item\em Prints formatted description of object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base multimedia-\/type file object. 
+
+This class is the base class for all objects which describe multimedia files in the project. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBaseObject_a83eecfd3bdaffda4e6c7d0fb98747f96}{\index{Base\-Object@{Base\-Object}!$\sim$\-Base\-Object@{$\sim$\-Base\-Object}}
+\index{$\sim$\-Base\-Object@{$\sim$\-Base\-Object}!BaseObject@{Base\-Object}}
+\subsubsection[{$\sim$\-Base\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Object\-::$\sim$\-Base\-Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBaseObject_a83eecfd3bdaffda4e6c7d0fb98747f96}
+
+
+Parameterless Destructor. 
+
+Implemetation is empty as there is nothing to delete. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBaseObject_a9bad65dddde7dec1ea622edce664cc9f}{\index{Base\-Object@{Base\-Object}!print@{print}}
+\index{print@{print}!BaseObject@{Base\-Object}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Object\-::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBaseObject_a9bad65dddde7dec1ea622edce664cc9f}
+
+
+Prints formatted description of object. 
+
+This function prints out a description of the object, usually by displaying the values of each member variable. It does this by calling the \hyperlink{classBaseObject_aab08eee6684fdfa0852b1f914379b9c4}{to\-String()} function of the object. Thus that function is virtual, so that subclasses of \hyperlink{classBaseObject}{Base\-Object} can effectively reimplement this function to include extra member data. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Base\-Object.\-h\item 
+Base\-Object.\-cpp\end{DoxyCompactItemize}
