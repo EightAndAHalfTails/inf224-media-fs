@@ -18,3 +18,9 @@ string Photo::toString() const
   buf << BaseObject::toString() << "Location: " << place << endl;
   return buf.str();
 }
+
+// getters
+const std::string& getPlace() const { return place; }
+
+//setters
+void setPlace(const std::string& _place) { place = _place; }

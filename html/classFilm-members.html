@@ -81,26 +81,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Video Member List</div>  </div>
+<div class="title">Film Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classVideo.html">Video</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classFilm.html">Film</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#ac9e64a371856dc974183c1b04bfdd0c9">BaseObject</a>()</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classBaseObject.html#aef7d506580d526367abe614c614aaf43">BaseObject</a>(std::string, time_t, std::string)</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#a1d9abdd27cea258333a27d505c57e857">getCreationDate</a>() const </td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getDuration</b>(void) const  (defined in <a class="el" href="classVideo.html">Video</a>)</td><td class="entry"><a class="el" href="classVideo.html">Video</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#a813ed6b0e98919c44c5ddf95495bfa2d">getName</a>() const </td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBaseObject.html#a46ce6977e2a06f0785aca14454df9d94">getPath</a>() const </td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#a9bad65dddde7dec1ea622edce664cc9f">print</a>() const </td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBaseObject.html#aeeb327051d61bd727722f583fa0bc41c">setCreationDate</a>(time_t)</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#a3999488d0dd4e825641ece8f332385e1">setName</a>(std::string)</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBaseObject.html#a06461859fe33fc77fee0b74dbbe1b57d">setPath</a>(std::string)</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classVideo.html#a5accd8b8a418f0216bf45659a8050d3d">setPlace</a>(int)</td><td class="entry"><a class="el" href="classVideo.html">Video</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classVideo.html#af09cd9142969d63b514a251769fbed86">toString</a>(void) const </td><td class="entry"><a class="el" href="classVideo.html">Video</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classVideo.html#ad0277d8e5772008e22ac2948e03e103b">Video</a>(std::string name=&quot;new video&quot;, time_t creat=time(NULL), std::string path=&quot;~/new_video&quot;, int duration=0)</td><td class="entry"><a class="el" href="classVideo.html">Video</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classBaseObject.html#a83eecfd3bdaffda4e6c7d0fb98747f96">~BaseObject</a>()</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFilm.html#a6ea805a054e1f43ec3963daf58ac7dd4">Film</a>(std::string name=&quot;new film&quot;, time_t creat=time(NULL), std::string path=&quot;~/new_film&quot;, int duration=0, int chapter_count=1, int *chapters=NULL)</td><td class="entry"><a class="el" href="classFilm.html">Film</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classFilm.html#a3e07b723255ff357d3f459b08c5fa39e">getChapterCount</a>(void) const </td><td class="entry"><a class="el" href="classFilm.html">Film</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFilm.html#ad0fa928009af1be1c176d06d55c14e11">getChapters</a>(void) const </td><td class="entry"><a class="el" href="classFilm.html">Film</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBaseObject.html#a1d9abdd27cea258333a27d505c57e857">getCreationDate</a>() const </td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>getDuration</b>(void) const  (defined in <a class="el" href="classVideo.html">Video</a>)</td><td class="entry"><a class="el" href="classVideo.html">Video</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBaseObject.html#a813ed6b0e98919c44c5ddf95495bfa2d">getName</a>() const </td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#a46ce6977e2a06f0785aca14454df9d94">getPath</a>() const </td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBaseObject.html#a9bad65dddde7dec1ea622edce664cc9f">print</a>() const </td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFilm.html#a019b6375e91a6d6322a19a81de3b965d">setChapterCount</a>(int)</td><td class="entry"><a class="el" href="classFilm.html">Film</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setChapters</b>(int *, int) (defined in <a class="el" href="classFilm.html">Film</a>)</td><td class="entry"><a class="el" href="classFilm.html">Film</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#aeeb327051d61bd727722f583fa0bc41c">setCreationDate</a>(time_t)</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classBaseObject.html#a3999488d0dd4e825641ece8f332385e1">setName</a>(std::string)</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#a06461859fe33fc77fee0b74dbbe1b57d">setPath</a>(std::string)</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classVideo.html#a5accd8b8a418f0216bf45659a8050d3d">setPlace</a>(int)</td><td class="entry"><a class="el" href="classVideo.html">Video</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFilm.html#ab88f7ac028cd45da81c96a50a2990fee">toString</a>() const </td><td class="entry"><a class="el" href="classFilm.html">Film</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classVideo.html#ad0277d8e5772008e22ac2948e03e103b">Video</a>(std::string name=&quot;new video&quot;, time_t creat=time(NULL), std::string path=&quot;~/new_video&quot;, int duration=0)</td><td class="entry"><a class="el" href="classVideo.html">Video</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classBaseObject.html#a83eecfd3bdaffda4e6c7d0fb98747f96">~BaseObject</a>()</td><td class="entry"><a class="el" href="classBaseObject.html">BaseObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classFilm.html#a8dab653f8a6c0635ca5ddbe0bbdd9a25">~Film</a>()</td><td class="entry"><a class="el" href="classFilm.html">Film</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classVideo.html#aebf7e2a8fa2bbd79335b1cf35925d190">~Video</a>()</td><td class="entry"><a class="el" href="classVideo.html">Video</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->

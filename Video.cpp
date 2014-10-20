@@ -18,3 +18,9 @@ string Video::toString() const
   buf << BaseObject::toString() << "Duration: " << duration << endl;
   return buf.str();
 }
+
+// getters
+int getDuration(void) const { return duration; }
+
+//setters
+void setPlace(int _place) { place = _place; }

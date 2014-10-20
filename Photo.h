@@ -24,7 +24,13 @@ public:
    */
   virtual ~Photo();
 
-  virtual std::string toString() const;
+  virtual std::string toString(void) const;
+  
+  // getters
+  const std::string& getPlace(void) const; //! getter for place
+
+  //setters
+  void setPlace(const std::string&); //! setter for place
 private:
   std::string place; //! geographic location of photo
 };

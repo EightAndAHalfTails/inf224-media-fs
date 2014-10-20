@@ -25,7 +25,13 @@ public:
    */
   virtual ~Video();
 
-  virtual std::string toString() const;
+  virtual std::string toString(void) const;
+
+  // getters
+  int getDuration(void) const; //! getter for duration
+
+  //setters
+  void setPlace(int); //! setter for duration
 
 private:
   int duration; //! length of video

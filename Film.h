@@ -28,10 +28,14 @@ public:
   virtual ~Film();
 
   virtual std::string toString() const;
-  void setChapters(int*, int);
-  void setChapterCount(int);
-  const int* getChapters(void) const;
-  int getChapterCount(void) const;
+
+  // setters
+  void setChapters(int*, int); //! setter for chapters array. must also pass length of array
+  void setChapterCount(int); //! setter for number of chapters
+
+  // getters
+  const int* getChapters(void) const; //! getter for chapter array
+  int getChapterCount(void) const; //! getter for number of chapters
 
 private:
   int duration; //! length of video
