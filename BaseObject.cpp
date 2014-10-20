@@ -30,7 +30,7 @@ string BaseObject::toString() const
 {
   stringstream buf;
   buf << "name: " << name << endl
-      << "created: " << creation_date << endl
+      << "created: " << ctime(&creation_date) << endl
       << "path: " << path << endl;
   return buf.str();
 }
