@@ -20,7 +20,7 @@ string Photo::toString() const
 }
 
 // getters
-const std::string& getPlace() const { return place; }
+const std::string& Photo::getPlace() const { return place; }
 
 //setters
-void setPlace(const std::string& _place) { place = _place; }
+void Photo::setPlace(const std::string& _place) { place = _place; }

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>My Project: Class Index</title>
+<title>My Project: Liste des types de multimedia:</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,8 +36,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -57,15 +57,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li class="current"><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
-    </ul>
-  </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,24 +71,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Class Index</div>  </div>
+<div class="title">Liste des types de multimedia: </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter_B">B</a>&#160;|&#160;<a class="qindex" href="#letter_F">F</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a>&#160;|&#160;<a class="qindex" href="#letter_V">V</a></div>
-<table style="margin: 10px; white-space: nowrap;" align="center" width="95%" border="0" cellspacing="0" cellpadding="0">
-<tr><td rowspan="2" valign="bottom"><a name="letter_B"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;B&#160;&#160;</div></td></tr></table>
-</td><td rowspan="2" valign="bottom"><a name="letter_F"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;F&#160;&#160;</div></td></tr></table>
-</td><td rowspan="2" valign="bottom"><a name="letter_P"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;P&#160;&#160;</div></td></tr></table>
-</td><td rowspan="2" valign="bottom"><a name="letter_V"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;V&#160;&#160;</div></td></tr></table>
-</td><td></td></tr>
-<tr><td></td></tr>
-<tr><td valign="top"><a class="el" href="classBaseObject.html">BaseObject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classFilm.html">Film</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classPhoto.html">Photo</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classVideo.html">Video</a>&#160;&#160;&#160;</td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td><td></td></tr>
-</table>
-<div class="qindex"><a class="qindex" href="#letter_B">B</a>&#160;|&#160;<a class="qindex" href="#letter_F">F</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a>&#160;|&#160;<a class="qindex" href="#letter_V">V</a></div>
-</div><!-- contents -->
+<div class="textblock"><ul>
+<li>Base( nom:string, date_de_creation:time_t, path:string )</li>
+<li>Photo( [ ceux de Base ], lieu:string )</li>
+<li>Video( [ ceux de Base ], duree:int )</li>
+<li>Film( [ ceux de Video ], nombre_de_chaiptres:int, duree_des_chaiptres:int[] )</li>
+</ul>
+<h1>7e étape</h1>
+<p>Ceux qui ont besoin de leurs propres destructeurs sont ceux avec des pointeurs comme variables. Ca veut dire aussi des tableaux, donc <a class="el" href="classFilm.html" title="Film file object.">Film</a>.</p>
+<p>Il faut aussi ecrire un constructeur de copie pour <a class="el" href="classFilm.html" title="Film file object.">Film</a>, pour copier profondement le tableau. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Fri Oct 24 2014 11:39:54 for My Project by &#160;<a href="http://www.doxygen.org/index.html">

@@ -9,12 +9,17 @@ Film::Film(string name, time_t creat, string path, int duration, int cc, int* ch
   : Video(name, creat, path, duration),
     chapter_count(cc)
 {
-  chapters = new int[cc];
-  for (int i=0; i<cc; i++)
-      chapters[i] = chaps[i];
+  makeChapters(chaps, cc);
 }
 
-Film::~Film(){ delete chapters; }
+Film::Film(const Film& film)
+  : Video(film),
+    chapter_count(film.getChapterCount())
+{
+  makeChapters(film.getChapters(), film.getChapterCount());
+}
+
+Film::~Film(){ delete[] chapters; }
 
 string Film::toString() const
 {
@@ -29,11 +34,19 @@ string Film::toString() const
   return buf.str();
 }
 
-void Film::setChapters(int* _chapters, int length)
+void Film::setChapters(const int* _chapters, int length)
 {
-  for(int i=0; i<length; i++)
-    chapters[i] = _chapters[i];
+  delete chapters;
+  makeChapters(_chapters, length);
 }
 
 const int* Film::getChapters(void) const { return chapters; }
 int Film::getChapterCount(void) const { return chapter_count; }
+
+void Film::makeChapters(const int* _chapters, int length)
+{
+  chapter_count = length;
+  chapters = new int[length];
+  for(int i=0; i<length; i++)
+    chapters[i] = _chapters[i];
+}

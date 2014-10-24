@@ -20,7 +20,7 @@ string Video::toString() const
 }
 
 // getters
-int getDuration(void) const { return duration; }
+int Video::getDuration(void) const { return duration; }
 
 //setters
-void setPlace(int _place) { place = _place; }
+void Video::setDuration(int _duration) { duration = _duration; }

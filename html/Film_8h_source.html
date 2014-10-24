@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -67,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,31 +99,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;       <span class="keywordtype">int</span> chapter_count = 1,</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;       <span class="keywordtype">int</span>* chapters = NULL);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classFilm.html#a6ea805a054e1f43ec3963daf58ac7dd4" title="Parametered Constructor.">Film</a>(<span class="keyword">const</span> <a class="code" href="classFilm.html" title="Film file object.">Film</a>&amp;);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classFilm.html#a8dab653f8a6c0635ca5ddbe0bbdd9a25" title="Parameterless Destructor.">~Film</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> std::string <a class="code" href="classFilm.html#ab88f7ac028cd45da81c96a50a2990fee" title="Returns multi-line string containing formatted description of object.">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classFilm.html#a8dab653f8a6c0635ca5ddbe0bbdd9a25" title="Parameterless Destructor.">~Film</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// setters</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFilm.html#a7cce5e45c3506a2b4150d43e3cba6813" title="setter for chapters array. must also pass length of array">setChapters</a>(<span class="keywordtype">int</span>*, <span class="keywordtype">int</span>); </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFilm.html#a019b6375e91a6d6322a19a81de3b965d" title="setter for number of chapters">setChapterCount</a>(<span class="keywordtype">int</span>); </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// getters</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span>* <a class="code" href="classFilm.html#ad0fa928009af1be1c176d06d55c14e11" title="getter for chapter array">getChapters</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFilm.html#a3e07b723255ff357d3f459b08c5fa39e" title="getter for number of chapters">getChapterCount</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">int</span> duration; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">int</span> chapter_count; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">int</span>* chapters; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> std::string <a class="code" href="classFilm.html#ab88f7ac028cd45da81c96a50a2990fee" title="Returns multi-line string containing formatted description of object.">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// setters</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFilm.html#ab0c2831b76a6b932dfc4a6facc38870c" title="setter for chapters array. must also pass length of array, which sets ChapterCount">setChapters</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>*, <span class="keywordtype">int</span>); </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// getters</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span>* <a class="code" href="classFilm.html#ad0fa928009af1be1c176d06d55c14e11" title="getter for chapter array">getChapters</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFilm.html#a3e07b723255ff357d3f459b08c5fa39e" title="getter for number of chapters">getChapterCount</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> makeChapters(<span class="keyword">const</span> <span class="keywordtype">int</span>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">int</span> chapter_count; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span>* chapters; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 20 2014 11:58:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 24 2014 11:39:54 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

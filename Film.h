@@ -20,25 +20,26 @@ public:
        int chapter_count = 1,
        int* chapters = NULL);
 
+  //! Copy Constructor
+  Film(const Film&);
 
   //! Parameterless Destructor
   /*!
-   * Implemetation is empty as there is nothing to delete.
+   * Deletes table of chapters.
    */
   virtual ~Film();
 
   virtual std::string toString() const;
 
   // setters
-  void setChapters(int*, int); //!< setter for chapters array. must also pass length of array
-  void setChapterCount(int); //!< setter for number of chapters
+  void setChapters(const int*, int); //!< setter for chapters array. must also pass length of array, which sets ChapterCount
 
   // getters
   const int* getChapters(void) const; //!< getter for chapter array
   int getChapterCount(void) const; //!< getter for number of chapters
 
 private:
-  int duration; //!< length of video
+  void makeChapters(const int*, int);
   int chapter_count; //!< number of chapters in the film
   int* chapters; //!< an array of integers describing the length of the chapters of the film
 };

@@ -12,3 +12,6 @@ Liste des types de multimedia:
 
 Ceux qui ont besoin de leurs propres destructeurs sont ceux avec des
 pointeurs comme variables. Ca veut dire aussi des tableaux, donc Film.
+
+Il faut aussi ecrire un constructeur de copie pour Film, pour copier
+profondement le tableau.

@@ -6,5 +6,5 @@ var searchData=
   ['getduration',['getDuration',['../classVideo.html#a1a495dbb8b0389e092758c62144ebc45',1,'Video']]],
   ['getname',['getName',['../classBaseObject.html#a813ed6b0e98919c44c5ddf95495bfa2d',1,'BaseObject']]],
   ['getpath',['getPath',['../classBaseObject.html#a46ce6977e2a06f0785aca14454df9d94',1,'BaseObject']]],
-  ['getplace',['getPlace',['../classPhoto.html#a1c84436ddbf58a50b632f1ef49c1fe31',1,'Photo']]]
+  ['getplace',['getPlace',['../classPhoto.html#a310123a0d107ab078bc83a80b484e2c1',1,'Photo']]]
 ];

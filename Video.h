@@ -31,7 +31,7 @@ public:
   int getDuration(void) const; //!< getter for duration
 
   //setters
-  void setPlace(int); //!< setter for duration
+  void setDuration(int); //!< setter for duration
 
 private:
   int duration; //!< length of video
