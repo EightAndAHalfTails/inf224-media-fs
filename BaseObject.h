@@ -56,9 +56,9 @@ public:
   void print() const;
 
 private:
-  std::string name; //! name of multimedia object (track name, movie title etc)
-  time_t creation_date; //! date of creation
-  std::string path; //! unix path (including filename) of object
+  std::string name; //!< name of multimedia object (track name, movie title etc)
+  time_t creation_date; //!< date of creation
+  std::string path; //!< unix path (including filename) of object
 };
 
 #endif

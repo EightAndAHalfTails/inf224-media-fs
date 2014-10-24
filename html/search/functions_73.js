@@ -1,6 +1,7 @@
 var searchData=
 [
   ['setchaptercount',['setChapterCount',['../classFilm.html#a019b6375e91a6d6322a19a81de3b965d',1,'Film']]],
+  ['setchapters',['setChapters',['../classFilm.html#a7cce5e45c3506a2b4150d43e3cba6813',1,'Film']]],
   ['setcreationdate',['setCreationDate',['../classBaseObject.html#aeeb327051d61bd727722f583fa0bc41c',1,'BaseObject']]],
   ['setname',['setName',['../classBaseObject.html#a3999488d0dd4e825641ece8f332385e1',1,'BaseObject']]],
   ['setpath',['setPath',['../classBaseObject.html#a06461859fe33fc77fee0b74dbbe1b57d',1,'BaseObject']]],

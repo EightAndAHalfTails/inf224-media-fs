@@ -30,17 +30,17 @@ public:
   virtual std::string toString() const;
 
   // setters
-  void setChapters(int*, int); //! setter for chapters array. must also pass length of array
-  void setChapterCount(int); //! setter for number of chapters
+  void setChapters(int*, int); //!< setter for chapters array. must also pass length of array
+  void setChapterCount(int); //!< setter for number of chapters
 
   // getters
-  const int* getChapters(void) const; //! getter for chapter array
-  int getChapterCount(void) const; //! getter for number of chapters
+  const int* getChapters(void) const; //!< getter for chapter array
+  int getChapterCount(void) const; //!< getter for number of chapters
 
 private:
-  int duration; //! length of video
-  int chapter_count; //! number of chapters in the film
-  int* chapters; //! an array of integers describing the length of the chapters of the film
+  int duration; //!< length of video
+  int chapter_count; //!< number of chapters in the film
+  int* chapters; //!< an array of integers describing the length of the chapters of the film
 };
 
 #endif

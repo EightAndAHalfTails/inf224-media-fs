@@ -27,12 +27,12 @@ public:
   virtual std::string toString(void) const;
   
   // getters
-  const std::string& getPlace(void) const; //! getter for place
+  const std::string& getPlace(void) const; //!< getter for place
 
   //setters
-  void setPlace(const std::string&); //! setter for place
+  void setPlace(const std::string&); //!< setter for place
 private:
-  std::string place; //! geographic location of photo
+  std::string place; //!< geographic location of photo
 };
 
 #endif

@@ -28,13 +28,13 @@ public:
   virtual std::string toString(void) const;
 
   // getters
-  int getDuration(void) const; //! getter for duration
+  int getDuration(void) const; //!< getter for duration
 
   //setters
-  void setPlace(int); //! setter for duration
+  void setPlace(int); //!< setter for duration
 
 private:
-  int duration; //! length of video
+  int duration; //!< length of video
 };
 
 #endif
