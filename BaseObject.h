@@ -55,6 +55,9 @@ public:
    */
   void print() const;
 
+  //! Opens file in external player
+  virtual void play() = 0;
+
 private:
   std::string name; //!< name of multimedia object (track name, movie title etc)
   time_t creation_date; //!< date of creation

@@ -2,6 +2,7 @@
 #include <string>
 #include <ctime>
 #include <sstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -17,6 +18,12 @@ string Photo::toString() const
   stringstream buf;
   buf << BaseObject::toString() << "Location: " << place << endl;
   return buf.str();
+}
+
+void Photo::play()
+{
+  const string command = "eog " + getPath() + " &";
+  system(command.c_str()); // execute command
 }
 
 // getters

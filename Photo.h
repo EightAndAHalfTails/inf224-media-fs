@@ -25,6 +25,8 @@ public:
   virtual ~Photo();
 
   virtual std::string toString(void) const;
+
+  virtual void play();
   
   // getters
   const std::string& getPlace(void) const; //!< getter for place

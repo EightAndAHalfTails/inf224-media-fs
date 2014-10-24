@@ -27,6 +27,8 @@ public:
 
   virtual std::string toString(void) const;
 
+  virtual void play();
+
   // getters
   int getDuration(void) const; //!< getter for duration
 

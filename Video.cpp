@@ -2,6 +2,7 @@
 #include <ctime>
 #include <string>
 #include <sstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -18,6 +19,13 @@ string Video::toString() const
   buf << BaseObject::toString() << "Duration: " << duration << endl;
   return buf.str();
 }
+
+void Video::play()
+{
+  const string command = "mplayer " + getPath() + " &";
+  system(command.c_str()); // execute command
+}
+
 
 // getters
 int Video::getDuration(void) const { return duration; }
