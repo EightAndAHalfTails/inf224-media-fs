@@ -17,7 +17,7 @@ public:
   BaseObject();
 
   //! Parametered Constructor
-  BaseObject(std::string, time_t, std::string);
+  BaseObject(const std::string&, time_t, const std::string&);
 
   //! Parameterless Destructor
   /*!
@@ -26,22 +26,22 @@ public:
   virtual ~BaseObject();
 
   //! Returns name of multimedia object (track name, movie title etc)
-  std::string getName() const;
+  const std::string& getName() const;
 
   //! Returns date of creation as time_t
   time_t getCreationDate() const;
 
   //! Returns unix path (including filename) of object
-  std::string getPath() const;
+  const std::string& getPath() const;
 
   //! Sets name of multimedia object (track name, movie title etc)
-  void setName(std::string);
+  void setName(const std::string&);
 
   //! Sets date of creation as time_t
   void setCreationDate(time_t);
 
   //! Sets unix path (including filename) of object
-  void setPath(std::string);
+  void setPath(const std::string&);
 
   //! Returns multi-line string containing formatted description of object
   virtual std::string toString() const;

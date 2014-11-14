@@ -13,10 +13,10 @@ class Photo : public BaseObject {
 public:
 
   //! Parametered Constructor
-  Photo(std::string name = "new photo",
+  Photo(const std::string& name = "new photo",
 	time_t creat = time(NULL),
-	std::string path = "~/new_photo",
-	std::string place = "" );
+	const std::string& path = "~/new_photo",
+	const std::string& place = "" );
 
   //! Parameterless Destructor
   /*!
@@ -33,6 +33,7 @@ public:
 
   //setters
   void setPlace(const std::string&); //!< setter for place
+
 private:
   std::string place; //!< geographic location of photo
 };

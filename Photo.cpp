@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Photo::Photo(string name, time_t creat, string path, string place)
+Photo::Photo(const string& name, time_t creat, const string& path, const string& place)
   : BaseObject(name, creat, path),
     place(place)
 {}

@@ -13,9 +13,9 @@ class Film : public Video {
 public:
 
   //! Parametered Constructor
-  Film(std::string name = "new film",
+  Film(const std::string& name = "new film",
        time_t creat = time(NULL),
-       std::string path = "~/new_film",
+       const std::string& path = "~/new_film",
        int duration = 0,
        int chapter_count = 1,
        int* chapters = NULL);

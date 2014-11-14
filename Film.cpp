@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Film::Film(string name, time_t creat, string path, int duration, int cc, int* chaps)
+Film::Film(const string& name, time_t creat, const string& path, int duration, int cc, int* chaps)
   : Video(name, creat, path, duration),
     chapter_count(cc)
 {

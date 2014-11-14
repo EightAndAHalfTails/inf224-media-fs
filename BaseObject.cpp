@@ -11,20 +11,21 @@ BaseObject::BaseObject(): name("new file"),
 			  path("~/newfile")
 {}
 
-BaseObject::BaseObject(string name, time_t creat, string path): name(name),
-								creation_date(creat),
-								path(path)
+BaseObject::BaseObject(const string& name, time_t creat, const string& path):
+  name(name),
+  creation_date(creat),
+  path(path)
 {}
 
 BaseObject::~BaseObject()
 {}
 
-string BaseObject::getName() const { return name; }
+const string& BaseObject::getName() const { return name; }
 time_t BaseObject::getCreationDate() const { return creation_date; }
-string BaseObject::getPath() const { return path; }
-void BaseObject::setName(std::string n) { name = n; }
+const string& BaseObject::getPath() const { return path; }
+void BaseObject::setName(const std::string& n) { name = n; }
 void BaseObject::setCreationDate(time_t t) { creation_date = t; } 
-void BaseObject::setPath(std::string p) { path = p; }
+void BaseObject::setPath(const std::string& p) { path = p; }
 
 string BaseObject::toString() const
 {

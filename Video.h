@@ -13,9 +13,9 @@ class Video : public BaseObject {
 public:
 
   //! Parametered Constructor
-  Video(std::string name = "new video",
+  Video(const std::string& name = "new video",
 	time_t creat = time(NULL),
-	std::string path = "~/new_video",
+	const std::string& path = "~/new_video",
 	int duration = 0 );
 
 

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Video::Video(string name, time_t creat, string path, int duration)
+Video::Video(const string& name, time_t creat, const string& path, int duration)
   : BaseObject(name, creat, path),
     duration(duration)
 {}
