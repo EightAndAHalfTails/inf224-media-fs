@@ -24,14 +24,17 @@ Film::~Film(){ delete[] chapters; }
 string Film::toString() const
 {
   stringstream buf;
-  buf << Video::toString() << endl
-      << "Chapters: " << chapter_count << endl;
-  for (int i=0; i<chapter_count; i++)
-    buf << "Chapter " << i << ": "
-	<< chapters[i] / 60 << " minutes "
-	<< chapters[i] % 60 << " seconds."
-	<< endl;
-  return buf.str();
+  buf << Video::toString()
+      << "Chapters:\t" << chapter_count << endl;
+  if(chapters != NULL)
+    {
+      for (int i=0; i<chapter_count; i++)
+	buf << "Chapter " << i << ":\t"
+	    << chapters[i] / 60 << " minutes "
+	    << chapters[i] % 60 << " seconds."
+	    << endl;
+    }
+  return buf.str();  
 }
 
 void Film::setChapters(const int* _chapters, int length)
@@ -46,7 +49,12 @@ int Film::getChapterCount(void) const { return chapter_count; }
 void Film::makeChapters(const int* _chapters, int length)
 {
   chapter_count = length;
-  chapters = new int[length];
-  for(int i=0; i<length; i++)
-    chapters[i] = _chapters[i];
+  if(length != 0)
+    {
+      chapters = new int[length];
+      for(int i=0; i<length; i++)
+	chapters[i] = _chapters[i];
+    }
+  else
+    chapters = NULL;
 }

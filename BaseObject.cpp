@@ -30,9 +30,9 @@ void BaseObject::setPath(const std::string& p) { path = p; }
 string BaseObject::toString() const
 {
   stringstream buf;
-  buf << "name: " << name << endl
-      << "created: " << ctime(&creation_date) << endl
-      << "path: " << path << endl;
+  buf << "name:\t\t" << name << endl
+      << "created:\t" << ctime(&creation_date)
+      << "path:\t\t" << path << endl;
   return buf.str();
 }
 

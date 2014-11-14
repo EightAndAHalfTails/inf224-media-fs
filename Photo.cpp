@@ -16,7 +16,7 @@ Photo::~Photo(){}
 string Photo::toString() const
 {
   stringstream buf;
-  buf << BaseObject::toString() << "Location: " << place << endl;
+  buf << BaseObject::toString() << "Location:\t" << place << endl;
   return buf.str();
 }
 

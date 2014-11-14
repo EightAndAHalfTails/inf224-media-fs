@@ -16,7 +16,10 @@ Video::~Video(){}
 string Video::toString() const
 {
   stringstream buf;
-  buf << BaseObject::toString() << "Duration: " << duration << endl;
+  buf << BaseObject::toString() << "Duration:\t"
+      << duration/(60*60) << " h "
+      << (duration%(60*60))/60 << " min "
+      << duration%60 << " sec" << endl;
   return buf.str();
 }
 

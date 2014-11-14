@@ -17,7 +17,7 @@ public:
        time_t creat = time(NULL),
        const std::string& path = "~/new_film",
        int duration = 0,
-       int chapter_count = 1,
+       int chapter_count = 0,
        int* chapters = NULL);
 
   //! Copy Constructor

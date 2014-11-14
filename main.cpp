@@ -1,6 +1,7 @@
 #include "Video.h"
 #include "Photo.h"
 #include "Film.h"
+#include "Group.h"
 #include <string>
 
 int main( int argc, const char* argv[] )
@@ -29,21 +30,23 @@ int main( int argc, const char* argv[] )
   int dur = 0;
   for(int i=0; i<cc; i++) dur += chaps[i];
 
-  Film* film = new Film("Alien vs Predator vs Godzilla", pasttime, "~/Films/film1", dur, cc, chaps);
-  Film* film_copy = new Film(*film);
-  film->print();
-  film_copy->print();
+  Film* film1 = new Film("Alien vs Predator vs Godzilla", pasttime, "~/Films/film1", dur, cc, chaps);
+  Film* film2 = new Film("The Disappearance of Haruhi Suzumiya", time(NULL), "~/Films/film2", 8888);
+  Video* vid1 = new Video("Ore Twintail ni Narimasu - 01");
+  Photo* pho1 = new Photo("azusa52435");
 
-  cc = 2;
-  chaps[0] = 120;
-  chaps[1] = 600;
-  film->setChapters(chaps, 2);
-  film->print();
-  film_copy->print();
+  Group anime("anime");
+  Group films("films");
 
-  delete film;
-  film_copy->print();
+  anime.push_back(film2);
+  anime.push_back(vid1);
+  anime.push_back(pho1);
 
+  films.push_back(film1);
+  films.push_back(film2);
+
+  anime.print();
+  films.print();
 
   return 0;
 }
