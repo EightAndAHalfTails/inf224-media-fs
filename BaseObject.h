@@ -1,6 +1,7 @@
 #ifndef BaseObject_h
 #define BaseObject_h
 
+#include "intrusive_ptr.h"
 #include <ctime>
 #include <string>
 
@@ -10,7 +11,7 @@
  * multimedia files in the project.
  */
 
-class BaseObject {
+class BaseObject: public Pointable {
 public:
 
   //! Parameterless Constructor

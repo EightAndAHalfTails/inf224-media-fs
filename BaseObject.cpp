@@ -17,8 +17,7 @@ BaseObject::BaseObject(const string& name, time_t creat, const string& path):
   path(path)
 {}
 
-BaseObject::~BaseObject()
-{}
+BaseObject::~BaseObject() { cout << name << " deleted." << endl;}
 
 const string& BaseObject::getName() const { return name; }
 time_t BaseObject::getCreationDate() const { return creation_date; }
