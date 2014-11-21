@@ -1,4 +1,6 @@
 *.o
 myprog
 depend-myprog
+Debug
+inf224-*
 *~
