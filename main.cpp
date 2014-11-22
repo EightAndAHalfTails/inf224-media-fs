@@ -5,12 +5,17 @@
 #include "Film.h"
 #include "Group.h"
 #include "intrusive_ptr.h"
+#include "MultFS.h"
 #include <string>
 
 using namespace std;
 
 int main( int argc, const char* argv[] )
 {
+  typedef intrusive_ptr<BaseObject> MultObj;
+  typedef intrusive_ptr<Group> MultGr;
+
+
   time_t rawtime;
   time( &rawtime );
   struct tm y2k;
@@ -35,39 +40,18 @@ int main( int argc, const char* argv[] )
   int dur = 0;
   for(int i=0; i<cc; i++) dur += chaps[i];
 
-  intrusive_ptr<Film> film1 = new Film("Alien vs Predator vs Godzilla", pasttime, "~/Films/film1", dur, cc, chaps);
-  intrusive_ptr<Film> film2 = new Film("The Disappearance of Haruhi Suzumiya", time(NULL), "~/Films/film2", 8888);
-  intrusive_ptr<Video> vid1 = new Video("Ore Twintail ni Narimasu - 01");
-  intrusive_ptr<Photo> pho1 = new Photo("azusa52435");
+  MultFS fs;
 
-  Group* anime = new Group("anime");
-  Group* films = new Group("films");
+  MultObj avpvg = fs.create(new Film("Alien vs Predator vs Godzilla", pasttime, "~/Films/film1", dur, cc, chaps));
+  MultObj tdohs = fs.create(new Film("The Disappearance of Haruhi Suzumiya", time(NULL), "~/Films/film2", 8888));
+  MultObj twin = fs.create(new Video("Ore Twintail ni Narimasu - 01"));
+  MultObj azu = fs.create(new Photo("azusa52435"));
 
-  anime->push_back(film2);
-  anime->push_back(vid1);
-  anime->push_back(pho1);
+  MultGr g = fs.create(new Group("anime"));
+  g->push_back(tdohs);
+  g->push_back(twin);
+  g->push_back(azu);
 
-  films->push_back(film1);
-  films->push_back(film2);
-
-  anime->print();
-  films->print();
-
-  cout << "Setting pointers to NULL...";
-  film1 = NULL;
-  film2 = NULL;
-  vid1 = NULL;
-  cout << "Done" << endl;
-
-  cout << "Deleting anime" << endl;
-  delete anime;
-
-  cout << "Deleting films" << endl;
-  delete films;
-
-  cout << "Deleting last photo" << endl;
-  pho1 = NULL;
-
-  cout << "End of Program" << endl;
+  fs.search("anime");
   return 0;
 }

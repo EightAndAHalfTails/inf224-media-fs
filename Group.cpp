@@ -20,3 +20,11 @@ void Group::print() const
     }
   cout << "============================" << endl;
 }
+
+void Group::play() const
+{
+  for (Group::const_iterator i = begin(); i != end(); i++)
+  {
+    (*i)->play();
+  }
+}
