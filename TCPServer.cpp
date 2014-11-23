@@ -28,9 +28,31 @@ struct TCPServerHook {
 
 TCPServer::TCPServer() : servsock() {
   pthread_rwlock_init(&lock, NULL);
-  
+  /*
   // Add a few test objects and groups
-  MultFS::MultObj avpvg = fs.create(new Film("Alien_vs_Predator_vs_Godzilla", time(NULL), "~/Films/film1", 6000));
+  time_t rawtime;
+  time( &rawtime );
+  struct tm y2k;
+  y2k.tm_year = 100;
+  y2k.tm_mon = 0;
+  y2k.tm_mday = 1;
+  y2k.tm_hour = 0;
+  y2k.tm_min = 0;
+  y2k.tm_sec = 0;
+  y2k.tm_isdst = 0;
+  time_t pasttime = mktime(&y2k);
+  
+  int cc = 5;
+  int* chaps = new int[cc];
+  chaps[0] = 60;
+  chaps[1] = 45;
+  chaps[2] = 120;
+  chaps[3] = 30;
+  chaps[4] = 95;
+  int dur = 0;
+  for(int i=0; i<cc; i++) dur += chaps[i];
+  
+  MultFS::MultObj avpvg = fs.create(new Film("Alien_vs_Predator_vs_Godzilla", pasttime, "~/Films/film1", dur, cc, chaps));
   MultFS::MultObj tdohs = fs.create(new Film("The_Disappearance_of_Haruhi_Suzumiya", time(NULL), "~/Films/film2", 8888));
   MultFS::MultObj twin = fs.create(new Video("Ore_Twintail_ni_Narimasu_-_01"));
   MultFS::MultObj azu = fs.create(new Photo("azusa"));
@@ -38,7 +60,7 @@ TCPServer::TCPServer() : servsock() {
   MultFS::MultGr g = fs.create(new Group("anime"));
   g->push_back(tdohs);
   g->push_back(twin);
-  g->push_back(azu);
+  g->push_back(azu);*/
 }
 
 TCPServer::~TCPServer() {}
@@ -176,9 +198,11 @@ bool TCPServer::processMessage(const string& message, string& response)
   const string searchcmd = "search";
   const string playcmd = "play";
   const string createcmd = "add";
+  const string writecmd = "write";
+  const string readcmd = "read";
   
-  // supposons que la commande "add" modifie les donnees
-  if (command == createcmd) change_data = true;
+  // les commandes "add" et "read" modifient les donnees
+  if (command == createcmd or command == readcmd) change_data = true;
   
   // suivant le cas, bloquer le verrou en mode WRITE ou en mode READ
   if (change_data)
@@ -194,6 +218,28 @@ bool TCPServer::processMessage(const string& message, string& response)
     {
       if (fs.play(arg)) response = "Playing";
       else response = "Not found";
+    }
+  else if (command == writecmd)
+    {
+      if(fs.write(arg))
+	{
+	  response = "Objects written to " + arg;
+	}
+      else
+	{
+	  response = "Error opening file";
+	}
+    }
+  else if (command == readcmd)
+    {
+      if(fs.read(arg))
+	{
+	  response = "Objects read from " + arg;
+	}
+      else
+	{
+	  response = "Error opening file";
+	}
     }
   else
     {

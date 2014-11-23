@@ -21,18 +21,31 @@ Film::Film(const Film& film)
 
 Film::~Film(){ delete[] chapters; }
 
-string Film::toString() const
+string Film::toString(bool human_readable) const
 {
   stringstream buf;
-  buf << Video::toString()
-      << "Chapters:\t" << chapter_count << endl;
-  if(chapters != NULL)
+  if(human_readable)
     {
-      for (int i=0; i<chapter_count; i++)
-	buf << "Chapter " << i << ":\t"
-	    << chapters[i] / 60 << " minutes "
-	    << chapters[i] % 60 << " seconds."
-	    << endl;
+      buf << Video::toString()
+	  << "Chapters:\t" << chapter_count << endl;
+      if(chapters != NULL)
+	{
+	  for (int i=0; i<chapter_count; i++)
+	    buf << "Chapter " << i << ":\t"
+		<< chapters[i] / 60 << " minutes "
+		<< chapters[i] % 60 << " seconds."
+		<< endl;
+	}
+    }
+  else
+    {
+      buf << Video::toString()
+	  << "chapters " << chapter_count << " ";
+      if(chapters != NULL)
+	{
+	  for (int i=0; i<chapter_count; i++)
+	    buf << chapters[i] << " ";
+	}
     }
   return buf.str();  
 }

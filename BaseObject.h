@@ -45,7 +45,7 @@ public:
   void setPath(const std::string&);
 
   //! Returns multi-line string containing formatted description of object
-  virtual std::string toString() const;
+  virtual std::string toString(bool = false) const;
 
   //! Prints formatted description of object
   /*! This function prints out a description of the object, usually by
@@ -58,7 +58,6 @@ public:
 
   //! Opens file in external player
   virtual void play() = 0;
-
 private:
   std::string name; //!< name of multimedia object (track name, movie title etc)
   time_t creation_date; //!< date of creation

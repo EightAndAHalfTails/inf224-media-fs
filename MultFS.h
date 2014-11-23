@@ -20,11 +20,14 @@ class MultFS
   //! Smart pointer to Group
   typedef intrusive_ptr<Group> MultGr;
 
-  //! Adds a new object to the object container
+  //! Adds a new object to the object container. Depricated.
   MultObj create(BaseObject*);
 
-  //! Adds a new group to the groups container
+  //! Adds a new group to the groups container. Depricated.
   MultGr create(Group*);
+
+  MultObj createObj(const std::string&);
+  MultGr createGr(const std::string&);
 
   //! Removes objects and groups by name
   void remove(const std::string&);
@@ -34,6 +37,12 @@ class MultFS
 
   //! Plays objects and groups with the given name
   bool play(const std::string&) const;
+
+  //! Writes the list of objects to a file
+  bool write(const std::string&) const;
+
+  //! Reads in objects from a file
+  bool read(const std::string&);
   
  private:
   typedef std::map < std::string, MultGr > groups_t;

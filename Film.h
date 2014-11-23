@@ -29,7 +29,7 @@ public:
    */
   virtual ~Film();
 
-  virtual std::string toString() const;
+  virtual std::string toString(bool = false) const;
 
   // setters
   void setChapters(const int*, int); //!< setter for chapters array. must also pass length of array, which sets ChapterCount

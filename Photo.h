@@ -24,7 +24,7 @@ public:
    */
   virtual ~Photo();
 
-  virtual std::string toString(void) const;
+  virtual std::string toString(bool = false) const;
 
   virtual void play();
   

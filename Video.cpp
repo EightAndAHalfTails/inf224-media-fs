@@ -13,13 +13,21 @@ Video::Video(const string& name, time_t creat, const string& path, int duration)
 
 Video::~Video(){}
 
-string Video::toString() const
+string Video::toString(bool human_readable) const
 {
   stringstream buf;
-  buf << BaseObject::toString() << "Duration:\t"
-      << duration/(60*60) << " h "
-      << (duration%(60*60))/60 << " min "
-      << duration%60 << " sec" << endl;
+  if(human_readable)
+    {
+      buf << BaseObject::toString() << "Duration:\t"
+	  << duration/(60*60) << " h "
+	  << (duration%(60*60))/60 << " min "
+	  << duration%60 << " sec" << endl;
+    }
+  else
+    {
+      buf << BaseObject::toString()
+	  << "duration " << duration << " ";
+    }
   return buf.str();
 }
 

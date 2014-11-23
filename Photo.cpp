@@ -13,11 +13,19 @@ Photo::Photo(const string& name, time_t creat, const string& path, const string&
 
 Photo::~Photo(){}
 
-string Photo::toString() const
+string Photo::toString(bool human_readable) const
 {
   stringstream buf;
-  buf << BaseObject::toString() << "Location:\t" << place << endl;
-  return buf.str();
+  if(human_readable)
+    {
+      buf << BaseObject::toString() << "Location:\t" << place << endl;
+    }
+  else
+    {
+      buf << BaseObject::toString()
+	  << "location " << place << " ";
+    }
+  return buf.str();    
 }
 
 void Photo::play()

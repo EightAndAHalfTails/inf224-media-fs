@@ -26,16 +26,25 @@ void BaseObject::setName(const std::string& n) { name = n; }
 void BaseObject::setCreationDate(time_t t) { creation_date = t; } 
 void BaseObject::setPath(const std::string& p) { path = p; }
 
-string BaseObject::toString() const
+string BaseObject::toString(bool human_readable) const
 {
   stringstream buf;
-  buf << "name:\t\t" << name << endl
-      << "created:\t" << ctime(&creation_date)
-      << "path:\t\t" << path << endl;
+  if(human_readable)
+    {
+      buf << "name:\t\t" << name << endl
+	  << "created:\t" << ctime(&creation_date)
+	  << "path:\t\t" << path << endl;
+    }
+  else
+    {
+      buf << "name " << name << " "
+	  << "created " << creation_date << " "
+	  << "path " << path << " ";
+    }
   return buf.str();
 }
 
 void BaseObject::print() const
 {
-  cout << toString();
+  cout << toString(true);
 }
