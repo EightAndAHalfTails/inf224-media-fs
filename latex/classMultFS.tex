@@ -24,25 +24,50 @@ Top-\/\+Level Class for Multimedia Objects.
 \item 
 \hypertarget{classMultFS_aacf6a025364bd168fbd6dd37aaa6a152}{\hyperlink{classMultFS_a3862987abee233b7ea08a67abc80b245}{Mult\+Obj} \hyperlink{classMultFS_aacf6a025364bd168fbd6dd37aaa6a152}{create} (\hyperlink{classBaseObject}{Base\+Object} $\ast$)}\label{classMultFS_aacf6a025364bd168fbd6dd37aaa6a152}
 
-\begin{DoxyCompactList}\small\item\em Adds a new object to the object container. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adds a new object to the object container. Depricated. \end{DoxyCompactList}\item 
 \hypertarget{classMultFS_abd99f17847032c1f667843e2bd72c57c}{\hyperlink{classMultFS_a0c5fea8cc8ab29c2624d5863cf75cc6f}{Mult\+Gr} \hyperlink{classMultFS_abd99f17847032c1f667843e2bd72c57c}{create} (\hyperlink{classGroup}{Group} $\ast$)}\label{classMultFS_abd99f17847032c1f667843e2bd72c57c}
 
-\begin{DoxyCompactList}\small\item\em Adds a new group to the groups container. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adds a new group to the groups container. Depricated. \end{DoxyCompactList}\item 
+\hypertarget{classMultFS_a96e45921965aa794c03c95d046a0f1b8}{\hyperlink{classMultFS_a3862987abee233b7ea08a67abc80b245}{Mult\+Obj} {\bfseries create\+Obj} (const std\+::string \&)}\label{classMultFS_a96e45921965aa794c03c95d046a0f1b8}
+
+\item 
+\hypertarget{classMultFS_a833b6278499d1e187f3828d39b936eaf}{\hyperlink{classMultFS_a0c5fea8cc8ab29c2624d5863cf75cc6f}{Mult\+Gr} {\bfseries create\+Gr} (const std\+::string \&)}\label{classMultFS_a833b6278499d1e187f3828d39b936eaf}
+
+\item 
 \hypertarget{classMultFS_a8f223d40df0273ae8eccfc15c8925765}{void \hyperlink{classMultFS_a8f223d40df0273ae8eccfc15c8925765}{remove} (const std\+::string \&)}\label{classMultFS_a8f223d40df0273ae8eccfc15c8925765}
 
 \begin{DoxyCompactList}\small\item\em Removes objects and groups by name. \end{DoxyCompactList}\item 
-\hypertarget{classMultFS_aaddef4508d38645853d251cfe87a865a}{std\+::string \hyperlink{classMultFS_aaddef4508d38645853d251cfe87a865a}{search} (const std\+::string \&) const }\label{classMultFS_aaddef4508d38645853d251cfe87a865a}
+\hypertarget{classMultFS_a7cee8ae014447fb24cf1efd5a3024101}{std\+::string \hyperlink{classMultFS_a7cee8ae014447fb24cf1efd5a3024101}{search} (const std\+::string \&) const }\label{classMultFS_a7cee8ae014447fb24cf1efd5a3024101}
 
 \begin{DoxyCompactList}\small\item\em Return a string containing details of objects and groups with the given name. \end{DoxyCompactList}\item 
 \hypertarget{classMultFS_a6f9ba46bf4916e4c1534a41f9222135a}{bool \hyperlink{classMultFS_a6f9ba46bf4916e4c1534a41f9222135a}{play} (const std\+::string \&) const }\label{classMultFS_a6f9ba46bf4916e4c1534a41f9222135a}
 
-\begin{DoxyCompactList}\small\item\em Plays objects and groups with the given name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Plays objects and groups with the given name. \end{DoxyCompactList}\item 
+\hypertarget{classMultFS_a8e9f409a1c1c51ccb64b65bec60c3168}{bool \hyperlink{classMultFS_a8e9f409a1c1c51ccb64b65bec60c3168}{write} (const std\+::string \&) const }\label{classMultFS_a8e9f409a1c1c51ccb64b65bec60c3168}
+
+\begin{DoxyCompactList}\small\item\em Writes the list of objects to a file. \end{DoxyCompactList}\item 
+int \hyperlink{classMultFS_a4b2f283bc6d3f77f920c38df6f618f65}{read} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Reads in objects from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Top-\/\+Level Class for Multimedia Objects. 
 
 This class contains all the objects and groups in the program, and is responsible for destroying or creating them. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classMultFS_a4b2f283bc6d3f77f920c38df6f618f65}{\index{Mult\+F\+S@{Mult\+F\+S}!read@{read}}
+\index{read@{read}!Mult\+F\+S@{Mult\+F\+S}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}int Mult\+F\+S\+::read (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{}
+\end{DoxyParamCaption}
+)}}\label{classMultFS_a4b2f283bc6d3f77f920c38df6f618f65}
+
+
+Reads in objects from a file. 
+
+Return value is the number of objects not read due to name conflicts 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -104,34 +104,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  MultGr <a class="code" href="classMultFS.html#aacf6a025364bd168fbd6dd37aaa6a152">create</a>(<a class="code" href="classGroup.html">Group</a>*);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> <span class="keyword">remove</span>(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  MultObj createObj(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  MultGr createGr(<span class="keyword">const</span> std::string&amp;);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  std::string <a class="code" href="classMultFS.html#aaddef4508d38645853d251cfe87a865a">search</a>(<span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">void</span> <span class="keyword">remove</span>(<span class="keyword">const</span> std::string&amp;);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classMultFS.html#a6f9ba46bf4916e4c1534a41f9222135a">play</a>(<span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">typedef</span> std::map &lt; std::string, MultGr &gt; groups_t;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">typedef</span> std::map &lt; std::string, MultObj &gt; objects_t;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  groups_t groups;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  objects_t objects;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  std::string <a class="code" href="classMultFS.html#a7cee8ae014447fb24cf1efd5a3024101">search</a>(<span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classMultFS.html#a6f9ba46bf4916e4c1534a41f9222135a">play</a>(<span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classMultFS.html#a8e9f409a1c1c51ccb64b65bec60c3168">write</a>(<span class="keyword">const</span> std::string&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classMultFS.html#a4b2f283bc6d3f77f920c38df6f618f65">read</a>(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">typedef</span> std::map &lt; std::string, MultGr &gt; groups_t;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">typedef</span> std::map &lt; std::string, MultObj &gt; objects_t;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  groups_t groups;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  objects_t objects;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classMultFS_html_a4b2f283bc6d3f77f920c38df6f618f65"><div class="ttname"><a href="classMultFS.html#a4b2f283bc6d3f77f920c38df6f618f65">MultFS::read</a></div><div class="ttdeci">int read(const std::string &amp;)</div><div class="ttdoc">Reads in objects from a file. </div><div class="ttdef"><b>Definition:</b> MultFS.cpp:137</div></div>
 <div class="ttc" id="classBaseObject_html"><div class="ttname"><a href="classBaseObject.html">BaseObject</a></div><div class="ttdoc">Base multimedia-type file object. </div><div class="ttdef"><b>Definition:</b> BaseObject.h:14</div></div>
 <div class="ttc" id="classMultFS_html_a0c5fea8cc8ab29c2624d5863cf75cc6f"><div class="ttname"><a href="classMultFS.html#a0c5fea8cc8ab29c2624d5863cf75cc6f">MultFS::MultGr</a></div><div class="ttdeci">intrusive_ptr&lt; Group &gt; MultGr</div><div class="ttdoc">Smart pointer to Group. </div><div class="ttdef"><b>Definition:</b> MultFS.h:21</div></div>
-<div class="ttc" id="classMultFS_html_a6f9ba46bf4916e4c1534a41f9222135a"><div class="ttname"><a href="classMultFS.html#a6f9ba46bf4916e4c1534a41f9222135a">MultFS::play</a></div><div class="ttdeci">bool play(const std::string &amp;) const </div><div class="ttdoc">Plays objects and groups with the given name. </div><div class="ttdef"><b>Definition:</b> MultFS.cpp:54</div></div>
+<div class="ttc" id="classMultFS_html_a8e9f409a1c1c51ccb64b65bec60c3168"><div class="ttname"><a href="classMultFS.html#a8e9f409a1c1c51ccb64b65bec60c3168">MultFS::write</a></div><div class="ttdeci">bool write(const std::string &amp;) const </div><div class="ttdoc">Writes the list of objects to a file. </div><div class="ttdef"><b>Definition:</b> MultFS.cpp:119</div></div>
+<div class="ttc" id="classMultFS_html_a6f9ba46bf4916e4c1534a41f9222135a"><div class="ttname"><a href="classMultFS.html#a6f9ba46bf4916e4c1534a41f9222135a">MultFS::play</a></div><div class="ttdeci">bool play(const std::string &amp;) const </div><div class="ttdoc">Plays objects and groups with the given name. </div><div class="ttdef"><b>Definition:</b> MultFS.cpp:107</div></div>
 <div class="ttc" id="classMultFS_html"><div class="ttname"><a href="classMultFS.html">MultFS</a></div><div class="ttdoc">Top-Level Class for Multimedia Objects. </div><div class="ttdef"><b>Definition:</b> MultFS.h:14</div></div>
-<div class="ttc" id="classMultFS_html_aacf6a025364bd168fbd6dd37aaa6a152"><div class="ttname"><a href="classMultFS.html#aacf6a025364bd168fbd6dd37aaa6a152">MultFS::create</a></div><div class="ttdeci">MultObj create(BaseObject *)</div><div class="ttdoc">Adds a new object to the object container. </div><div class="ttdef"><b>Definition:</b> MultFS.cpp:3</div></div>
-<div class="ttc" id="classMultFS_html_aaddef4508d38645853d251cfe87a865a"><div class="ttname"><a href="classMultFS.html#aaddef4508d38645853d251cfe87a865a">MultFS::search</a></div><div class="ttdeci">std::string search(const std::string &amp;) const </div><div class="ttdoc">Return a string containing details of objects and groups with the given name. </div><div class="ttdef"><b>Definition:</b> MultFS.cpp:43</div></div>
+<div class="ttc" id="classMultFS_html_a7cee8ae014447fb24cf1efd5a3024101"><div class="ttname"><a href="classMultFS.html#a7cee8ae014447fb24cf1efd5a3024101">MultFS::search</a></div><div class="ttdeci">std::string search(const std::string &amp;) const </div><div class="ttdoc">Return a string containing details of objects and groups with the given name. </div><div class="ttdef"><b>Definition:</b> MultFS.cpp:96</div></div>
+<div class="ttc" id="classMultFS_html_aacf6a025364bd168fbd6dd37aaa6a152"><div class="ttname"><a href="classMultFS.html#aacf6a025364bd168fbd6dd37aaa6a152">MultFS::create</a></div><div class="ttdeci">MultObj create(BaseObject *)</div><div class="ttdoc">Adds a new object to the object container. Depricated. </div><div class="ttdef"><b>Definition:</b> MultFS.cpp:11</div></div>
 <div class="ttc" id="classGroup_html"><div class="ttname"><a href="classGroup.html">Group</a></div><div class="ttdoc">Container Class for Multimedia Objects. </div><div class="ttdef"><b>Definition:</b> Group.h:13</div></div>
 <div class="ttc" id="classMultFS_html_a3862987abee233b7ea08a67abc80b245"><div class="ttname"><a href="classMultFS.html#a3862987abee233b7ea08a67abc80b245">MultFS::MultObj</a></div><div class="ttdeci">intrusive_ptr&lt; BaseObject &gt; MultObj</div><div class="ttdoc">Smart pointer to BaseObject. </div><div class="ttdef"><b>Definition:</b> MultFS.h:18</div></div>
 <div class="ttc" id="classintrusive__ptr_html"><div class="ttname"><a href="classintrusive__ptr.html">intrusive_ptr</a></div><div class="ttdef"><b>Definition:</b> intrusive_ptr.h:124</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2014 13:37:55 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 24 2014 00:05:01 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

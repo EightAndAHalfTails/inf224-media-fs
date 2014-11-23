@@ -113,25 +113,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBaseObject.html#a7841749de25678d8cbedf021e760cbee">setPath</a>(<span class="keyword">const</span> std::string&amp;);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> std::string <a class="code" href="classBaseObject.html#aab08eee6684fdfa0852b1f914379b9c4">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">virtual</span> std::string <a class="code" href="classBaseObject.html#af433968d291ebfc54c701987047f9348">toString</a>(<span class="keywordtype">bool</span> = <span class="keyword">false</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBaseObject.html#a9bad65dddde7dec1ea622edce664cc9f">print</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classBaseObject.html#a63e43537301807233867a3b61052f5a6">play</a>() = 0;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  std::string name; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  time_t creation_date; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  std::string path; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  std::string name; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  time_t creation_date; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  std::string path; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classBaseObject_html"><div class="ttname"><a href="classBaseObject.html">BaseObject</a></div><div class="ttdoc">Base multimedia-type file object. </div><div class="ttdef"><b>Definition:</b> BaseObject.h:14</div></div>
 <div class="ttc" id="classBaseObject_html_a63e43537301807233867a3b61052f5a6"><div class="ttname"><a href="classBaseObject.html#a63e43537301807233867a3b61052f5a6">BaseObject::play</a></div><div class="ttdeci">virtual void play()=0</div><div class="ttdoc">Opens file in external player. </div></div>
-<div class="ttc" id="classBaseObject_html_a9bad65dddde7dec1ea622edce664cc9f"><div class="ttname"><a href="classBaseObject.html#a9bad65dddde7dec1ea622edce664cc9f">BaseObject::print</a></div><div class="ttdeci">void print() const </div><div class="ttdoc">Prints formatted description of object. </div><div class="ttdef"><b>Definition:</b> BaseObject.cpp:38</div></div>
+<div class="ttc" id="classBaseObject_html_af433968d291ebfc54c701987047f9348"><div class="ttname"><a href="classBaseObject.html#af433968d291ebfc54c701987047f9348">BaseObject::toString</a></div><div class="ttdeci">virtual std::string toString(bool=false) const </div><div class="ttdoc">Returns multi-line string containing formatted description of object. </div><div class="ttdef"><b>Definition:</b> BaseObject.cpp:29</div></div>
+<div class="ttc" id="classBaseObject_html_a9bad65dddde7dec1ea622edce664cc9f"><div class="ttname"><a href="classBaseObject.html#a9bad65dddde7dec1ea622edce664cc9f">BaseObject::print</a></div><div class="ttdeci">void print() const </div><div class="ttdoc">Prints formatted description of object. </div><div class="ttdef"><b>Definition:</b> BaseObject.cpp:47</div></div>
 <div class="ttc" id="classBaseObject_html_a83eecfd3bdaffda4e6c7d0fb98747f96"><div class="ttname"><a href="classBaseObject.html#a83eecfd3bdaffda4e6c7d0fb98747f96">BaseObject::~BaseObject</a></div><div class="ttdeci">virtual ~BaseObject()</div><div class="ttdoc">Parameterless Destructor. </div><div class="ttdef"><b>Definition:</b> BaseObject.cpp:20</div></div>
-<div class="ttc" id="classBaseObject_html_aab08eee6684fdfa0852b1f914379b9c4"><div class="ttname"><a href="classBaseObject.html#aab08eee6684fdfa0852b1f914379b9c4">BaseObject::toString</a></div><div class="ttdeci">virtual std::string toString() const </div><div class="ttdoc">Returns multi-line string containing formatted description of object. </div><div class="ttdef"><b>Definition:</b> BaseObject.cpp:29</div></div>
 <div class="ttc" id="classBaseObject_html_a1d9abdd27cea258333a27d505c57e857"><div class="ttname"><a href="classBaseObject.html#a1d9abdd27cea258333a27d505c57e857">BaseObject::getCreationDate</a></div><div class="ttdeci">time_t getCreationDate() const </div><div class="ttdoc">Returns date of creation as time_t. </div><div class="ttdef"><b>Definition:</b> BaseObject.cpp:23</div></div>
 <div class="ttc" id="classBaseObject_html_aeeb327051d61bd727722f583fa0bc41c"><div class="ttname"><a href="classBaseObject.html#aeeb327051d61bd727722f583fa0bc41c">BaseObject::setCreationDate</a></div><div class="ttdeci">void setCreationDate(time_t)</div><div class="ttdoc">Sets date of creation as time_t. </div><div class="ttdef"><b>Definition:</b> BaseObject.cpp:26</div></div>
 <div class="ttc" id="classPointable_html"><div class="ttname"><a href="classPointable.html">Pointable</a></div><div class="ttdef"><b>Definition:</b> intrusive_ptr.h:50</div></div>
@@ -143,7 +142,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2014 13:37:55 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 24 2014 00:05:00 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

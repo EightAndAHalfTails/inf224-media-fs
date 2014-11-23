@@ -102,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classVideo.html#aebf7e2a8fa2bbd79335b1cf35925d190">~Video</a>();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> std::string <a class="code" href="classVideo.html#af09cd9142969d63b514a251769fbed86">toString</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> std::string <a class="code" href="classVideo.html#abd241d68fe0a4e5a83d6ca5b0b070bf4">toString</a>(<span class="keywordtype">bool</span> = <span class="keyword">false</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVideo.html#a192acb2bbb1592566ec2393dc99e3083">play</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
@@ -118,17 +118,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classBaseObject_html"><div class="ttname"><a href="classBaseObject.html">BaseObject</a></div><div class="ttdoc">Base multimedia-type file object. </div><div class="ttdef"><b>Definition:</b> BaseObject.h:14</div></div>
-<div class="ttc" id="classVideo_html_a192acb2bbb1592566ec2393dc99e3083"><div class="ttname"><a href="classVideo.html#a192acb2bbb1592566ec2393dc99e3083">Video::play</a></div><div class="ttdeci">virtual void play()</div><div class="ttdoc">Opens file in external player. </div><div class="ttdef"><b>Definition:</b> Video.cpp:26</div></div>
-<div class="ttc" id="classVideo_html_a1a495dbb8b0389e092758c62144ebc45"><div class="ttname"><a href="classVideo.html#a1a495dbb8b0389e092758c62144ebc45">Video::getDuration</a></div><div class="ttdeci">int getDuration(void) const </div><div class="ttdoc">getter for duration </div><div class="ttdef"><b>Definition:</b> Video.cpp:34</div></div>
-<div class="ttc" id="classVideo_html_af09cd9142969d63b514a251769fbed86"><div class="ttname"><a href="classVideo.html#af09cd9142969d63b514a251769fbed86">Video::toString</a></div><div class="ttdeci">virtual std::string toString(void) const </div><div class="ttdoc">Returns multi-line string containing formatted description of object. </div><div class="ttdef"><b>Definition:</b> Video.cpp:16</div></div>
+<div class="ttc" id="classVideo_html_a192acb2bbb1592566ec2393dc99e3083"><div class="ttname"><a href="classVideo.html#a192acb2bbb1592566ec2393dc99e3083">Video::play</a></div><div class="ttdeci">virtual void play()</div><div class="ttdoc">Opens file in external player. </div><div class="ttdef"><b>Definition:</b> Video.cpp:34</div></div>
+<div class="ttc" id="classVideo_html_a1a495dbb8b0389e092758c62144ebc45"><div class="ttname"><a href="classVideo.html#a1a495dbb8b0389e092758c62144ebc45">Video::getDuration</a></div><div class="ttdeci">int getDuration(void) const </div><div class="ttdoc">getter for duration </div><div class="ttdef"><b>Definition:</b> Video.cpp:42</div></div>
 <div class="ttc" id="classVideo_html"><div class="ttname"><a href="classVideo.html">Video</a></div><div class="ttdoc">Video file object. </div><div class="ttdef"><b>Definition:</b> Video.h:12</div></div>
 <div class="ttc" id="classVideo_html_aa360b390158aec7378c1dceb8602138b"><div class="ttname"><a href="classVideo.html#aa360b390158aec7378c1dceb8602138b">Video::Video</a></div><div class="ttdeci">Video(const std::string &amp;name=&quot;new video&quot;, time_t creat=time(NULL), const std::string &amp;path=&quot;~/new_video&quot;, int duration=0)</div><div class="ttdoc">Parametered Constructor. </div><div class="ttdef"><b>Definition:</b> Video.cpp:9</div></div>
-<div class="ttc" id="classVideo_html_a0fbbf03b902423efa2179142902bb0d0"><div class="ttname"><a href="classVideo.html#a0fbbf03b902423efa2179142902bb0d0">Video::setDuration</a></div><div class="ttdeci">void setDuration(int)</div><div class="ttdoc">setter for duration </div><div class="ttdef"><b>Definition:</b> Video.cpp:37</div></div>
+<div class="ttc" id="classVideo_html_abd241d68fe0a4e5a83d6ca5b0b070bf4"><div class="ttname"><a href="classVideo.html#abd241d68fe0a4e5a83d6ca5b0b070bf4">Video::toString</a></div><div class="ttdeci">virtual std::string toString(bool=false) const </div><div class="ttdoc">Returns multi-line string containing formatted description of object. </div><div class="ttdef"><b>Definition:</b> Video.cpp:16</div></div>
+<div class="ttc" id="classVideo_html_a0fbbf03b902423efa2179142902bb0d0"><div class="ttname"><a href="classVideo.html#a0fbbf03b902423efa2179142902bb0d0">Video::setDuration</a></div><div class="ttdeci">void setDuration(int)</div><div class="ttdoc">setter for duration </div><div class="ttdef"><b>Definition:</b> Video.cpp:45</div></div>
 <div class="ttc" id="classVideo_html_aebf7e2a8fa2bbd79335b1cf35925d190"><div class="ttname"><a href="classVideo.html#aebf7e2a8fa2bbd79335b1cf35925d190">Video::~Video</a></div><div class="ttdeci">virtual ~Video()</div><div class="ttdoc">Parameterless Destructor. </div><div class="ttdef"><b>Definition:</b> Video.cpp:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2014 13:37:55 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 24 2014 00:05:01 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
