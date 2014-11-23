@@ -1,12 +1,12 @@
 #include "MultFS.h"
 
-intrusive_ptr<BaseObject> MultFS::create(BaseObject* ob)
+MultFS::MultObj MultFS::create(BaseObject* ob)
 {
   objects[ob->getName()] = ob;
   return ob;
 }
 
-intrusive_ptr<Group> MultFS::create(Group* g)
+MultFS::MultGr MultFS::create(Group* g)
 {
   groups[g->getName()] = g;
   return g;

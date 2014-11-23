@@ -13,20 +13,18 @@
 */
 class MultFS 
 {
-private:
-  typedef std::map < std::string, intrusive_ptr < Group > > groups_t;
-  typedef std::map < std::string, intrusive_ptr < BaseObject > > objects_t;
+ public:
+  //! Smart pointer to BaseObject
+  typedef intrusive_ptr<BaseObject> MultObj;
 
-  groups_t groups;
-  objects_t objects;
-
-public:
+  //! Smart pointer to Group
+  typedef intrusive_ptr<Group> MultGr;
 
   //! Adds a new object to the object container
-  intrusive_ptr<BaseObject> create(BaseObject*);
+  MultObj create(BaseObject*);
 
   //! Adds a new group to the groups container
-  intrusive_ptr<Group> create(Group*);
+  MultGr create(Group*);
 
   //! Removes objects and groups by name
   void remove(const std::string&);
@@ -36,5 +34,13 @@ public:
 
   //! Plays objects and groups with the given name
   bool play(const std::string&) const;
+  
+ private:
+  typedef std::map < std::string, MultGr > groups_t;
+  typedef std::map < std::string, MultObj > objects_t;
+
+  groups_t groups;
+  objects_t objects;
+
 };
 #endif

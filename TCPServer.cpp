@@ -5,6 +5,10 @@
 //
 
 #include "TCPServer.h"
+#include "MultFS.h"
+#include "Film.h"
+#include "Video.h"
+#include "Photo.h"
 #include <unistd.h>
 #include <iostream>
 #include <sstream>
@@ -24,6 +28,17 @@ struct TCPServerHook {
 
 TCPServer::TCPServer() : servsock() {
   pthread_rwlock_init(&lock, NULL);
+  
+  // Add a few test objects and groups
+  MultFS::MultObj avpvg = fs.create(new Film("Alien_vs_Predator_vs_Godzilla", time(NULL), "~/Films/film1", 6000));
+  MultFS::MultObj tdohs = fs.create(new Film("The_Disappearance_of_Haruhi_Suzumiya", time(NULL), "~/Films/film2", 8888));
+  MultFS::MultObj twin = fs.create(new Video("Ore_Twintail_ni_Narimasu_-_01"));
+  MultFS::MultObj azu = fs.create(new Photo("azusa"));
+
+  MultFS::MultGr g = fs.create(new Group("anime"));
+  g->push_back(tdohs);
+  g->push_back(twin);
+  g->push_back(azu);
 }
 
 TCPServer::~TCPServer() {}
@@ -157,28 +172,19 @@ bool TCPServer::processMessage(const string& message, string& response)
   cout << "Received message '" << message << "'" << endl
        << "consisting of command " << command << endl
        << "and argument " << arg << endl;
+
+  const string searchcmd = "search";
+  const string playcmd = "play";
+  const string createcmd = "add";
   
-  // supposons que la commande "deletePhotos" modifie les donnees
-  if (message == "deletePhotos") change_data = true;
+  // supposons que la commande "add" modifie les donnees
+  if (command == createcmd) change_data = true;
   
   // suivant le cas, bloquer le verrou en mode WRITE ou en mode READ
   if (change_data)
     pthread_rwlock_wrlock(&lock);  // bloque en mode WRITE
   else
     pthread_rwlock_rdlock(&lock);  // bloque en mode READ
-  
-  /*
-  // executer la commande et calculer la reponse
-  // pour l'instant on se contente de prefixer le message par "OK: "
-  cout << "TCPServer: message: " << message << endl;
-  response = "OK: ";
-  response += message;
-  // sleep(8);                    // sert uniquement a tester le verrou
-  cout << "TCPServer:TCPServer response: " << response << endl;
-  */
-
-  const string searchcmd = "search";
-  const string playcmd = "play";
 
   if (command == searchcmd)
     {
@@ -188,6 +194,10 @@ bool TCPServer::processMessage(const string& message, string& response)
     {
       if (fs.play(arg)) response = "Playing";
       else response = "Not found";
+    }
+  else
+    {
+      response = "Command unrecognised: " + command;
     }
   
   // debloque le verrou (attention ne pas oublier cette ligne !)

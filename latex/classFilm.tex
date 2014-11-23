@@ -8,35 +8,35 @@
 
 
 
-{\ttfamily \#include $<$Film.\-h$>$}
+{\ttfamily \#include $<$Film.\+h$>$}
 
-Inheritance diagram for Film\-:\begin{figure}[H]
+Inheritance diagram for Film\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{classFilm}
+\includegraphics[height=4.000000cm]{classFilm}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classFilm_a6ea805a054e1f43ec3963daf58ac7dd4}{\hyperlink{classFilm_a6ea805a054e1f43ec3963daf58ac7dd4}{Film} (std\-::string name=\char`\"{}new film\char`\"{}, time\-\_\-t creat=time(N\-U\-L\-L), std\-::string path=\char`\"{}$\sim$/new\-\_\-film\char`\"{}, int duration=0, int chapter\-\_\-count=1, int $\ast$chapters=N\-U\-L\-L)}\label{classFilm_a6ea805a054e1f43ec3963daf58ac7dd4}
+\hypertarget{classFilm_a704092a2bb7629c5bf053c8011e148ee}{\hyperlink{classFilm_a704092a2bb7629c5bf053c8011e148ee}{Film} (const std\+::string \&name=\char`\"{}new film\char`\"{}, time\+\_\+t creat=time(N\+U\+L\+L), const std\+::string \&path=\char`\"{}$\sim$/new\+\_\+film\char`\"{}, int duration=0, int chapter\+\_\+count=0, int $\ast$chapters=N\+U\+L\+L)}\label{classFilm_a704092a2bb7629c5bf053c8011e148ee}
 
 \begin{DoxyCompactList}\small\item\em Parametered Constructor. \end{DoxyCompactList}\item 
 \hypertarget{classFilm_a34c9de2efb9554ce1192e4110d98806b}{\hyperlink{classFilm_a34c9de2efb9554ce1192e4110d98806b}{Film} (const \hyperlink{classFilm}{Film} \&)}\label{classFilm_a34c9de2efb9554ce1192e4110d98806b}
 
 \begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
-virtual \hyperlink{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{$\sim$\-Film} ()
+virtual \hyperlink{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{$\sim$\+Film} ()
 \begin{DoxyCompactList}\small\item\em Parameterless Destructor. \end{DoxyCompactList}\item 
-\hypertarget{classFilm_ab88f7ac028cd45da81c96a50a2990fee}{virtual std\-::string \hyperlink{classFilm_ab88f7ac028cd45da81c96a50a2990fee}{to\-String} () const }\label{classFilm_ab88f7ac028cd45da81c96a50a2990fee}
+\hypertarget{classFilm_ab88f7ac028cd45da81c96a50a2990fee}{virtual std\+::string \hyperlink{classFilm_ab88f7ac028cd45da81c96a50a2990fee}{to\+String} () const }\label{classFilm_ab88f7ac028cd45da81c96a50a2990fee}
 
 \begin{DoxyCompactList}\small\item\em Returns multi-\/line string containing formatted description of object. \end{DoxyCompactList}\item 
-\hypertarget{classFilm_ab0c2831b76a6b932dfc4a6facc38870c}{void \hyperlink{classFilm_ab0c2831b76a6b932dfc4a6facc38870c}{set\-Chapters} (const int $\ast$, int)}\label{classFilm_ab0c2831b76a6b932dfc4a6facc38870c}
+\hypertarget{classFilm_ab0c2831b76a6b932dfc4a6facc38870c}{void \hyperlink{classFilm_ab0c2831b76a6b932dfc4a6facc38870c}{set\+Chapters} (const int $\ast$, int)}\label{classFilm_ab0c2831b76a6b932dfc4a6facc38870c}
 
-\begin{DoxyCompactList}\small\item\em setter for chapters array. must also pass length of array, which sets Chapter\-Count \end{DoxyCompactList}\item 
-\hypertarget{classFilm_ad0fa928009af1be1c176d06d55c14e11}{const int $\ast$ \hyperlink{classFilm_ad0fa928009af1be1c176d06d55c14e11}{get\-Chapters} (void) const }\label{classFilm_ad0fa928009af1be1c176d06d55c14e11}
+\begin{DoxyCompactList}\small\item\em setter for chapters array. must also pass length of array, which sets Chapter\+Count \end{DoxyCompactList}\item 
+\hypertarget{classFilm_ad0fa928009af1be1c176d06d55c14e11}{const int $\ast$ \hyperlink{classFilm_ad0fa928009af1be1c176d06d55c14e11}{get\+Chapters} (void) const }\label{classFilm_ad0fa928009af1be1c176d06d55c14e11}
 
 \begin{DoxyCompactList}\small\item\em getter for chapter array \end{DoxyCompactList}\item 
-\hypertarget{classFilm_a3e07b723255ff357d3f459b08c5fa39e}{int \hyperlink{classFilm_a3e07b723255ff357d3f459b08c5fa39e}{get\-Chapter\-Count} (void) const }\label{classFilm_a3e07b723255ff357d3f459b08c5fa39e}
+\hypertarget{classFilm_a3e07b723255ff357d3f459b08c5fa39e}{int \hyperlink{classFilm_a3e07b723255ff357d3f459b08c5fa39e}{get\+Chapter\+Count} (void) const }\label{classFilm_a3e07b723255ff357d3f459b08c5fa39e}
 
 \begin{DoxyCompactList}\small\item\em getter for number of chapters \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -47,9 +47,9 @@ virtual \hyperlink{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{$\sim$\-Film} ()
 This class describes a \hyperlink{classFilm}{Film} object 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{\index{Film@{Film}!$\sim$\-Film@{$\sim$\-Film}}
-\index{$\sim$\-Film@{$\sim$\-Film}!Film@{Film}}
-\subsubsection[{$\sim$\-Film}]{\setlength{\rightskip}{0pt plus 5cm}Film\-::$\sim$\-Film (
+\hypertarget{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{\index{Film@{Film}!````~Film@{$\sim$\+Film}}
+\index{````~Film@{$\sim$\+Film}!Film@{Film}}
+\subsubsection[{$\sim$\+Film}]{\setlength{\rightskip}{0pt plus 5cm}Film\+::$\sim$\+Film (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -60,7 +60,7 @@ Parameterless Destructor.
 
 Deletes table of chapters. 
 
-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Film.\-h\item 
-Film.\-cpp\end{DoxyCompactItemize}
+Film.\+h\item 
+Film.\+cpp\end{DoxyCompactItemize}
