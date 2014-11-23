@@ -232,9 +232,16 @@ bool TCPServer::processMessage(const string& message, string& response)
     }
   else if (command == readcmd)
     {
-      if(fs.read(arg))
+      int errors = fs.read(arg);
+      if(errors >= 0)
 	{
 	  response = "Objects read from " + arg;
+	  if (errors > 0)
+	    {
+	      stringstream errortext;
+	      errortext << "Error: " << errors << " objects not read from " << arg; 
+	      response = errortext.str();
+	    }
 	}
       else
 	{

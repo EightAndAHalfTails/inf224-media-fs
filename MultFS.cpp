@@ -134,15 +134,16 @@ bool MultFS::write(const string& filename) const
   return true;
 }
 
-bool MultFS::read(const string& filename)
+int MultFS::read(const string& filename)
 {
+  int errors = 0;
   ifstream ifs;
   ifs.open(filename.c_str());
 
   if(!ifs.is_open())
     {
       cout << "Error opening file" << endl;
-      return false;
+      return -1;
     }
   while(ifs.good())
     {
@@ -153,9 +154,17 @@ bool MultFS::read(const string& filename)
       if(line != "")
 	{
 	  MultObj ob = createObj(string(line));
-	  objects[ob->getName()] = ob;
+	  if(objects.count(ob->getName()) == 0)
+	    {
+	      objects[ob->getName()] = ob;
+	    }
+	  else
+	    {
+	      cout << "Error: name exists" << endl;
+	      errors++;
+	    }
 	}
     }
   ifs.close();
-  return true;
+  return errors;
 }

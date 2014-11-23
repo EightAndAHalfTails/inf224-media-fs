@@ -42,7 +42,10 @@ class MultFS
   bool write(const std::string&) const;
 
   //! Reads in objects from a file
-  bool read(const std::string&);
+  /*!
+   * Return value is the number of objects not read due to name conflicts
+   */
+  int read(const std::string&);
   
  private:
   typedef std::map < std::string, MultGr > groups_t;
