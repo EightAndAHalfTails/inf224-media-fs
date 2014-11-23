@@ -149,6 +149,14 @@ bool TCPServer::processMessage(const string& message, string& response)
   // cette variable indique si la commande modifie les donnees du programme
   // par defaut on suppose que non
   bool change_data = false;
+
+  stringstream msgstream(message);
+  string command, arg;
+  msgstream >> command >> arg;
+
+  cout << "Received message '" << message << "'" << endl
+       << "consisting of command " << command << endl
+       << "and argument " << arg << endl;
   
   // supposons que la commande "deletePhotos" modifie les donnees
   if (message == "deletePhotos") change_data = true;
@@ -159,7 +167,7 @@ bool TCPServer::processMessage(const string& message, string& response)
   else
     pthread_rwlock_rdlock(&lock);  // bloque en mode READ
   
-  
+  /*
   // executer la commande et calculer la reponse
   // pour l'instant on se contente de prefixer le message par "OK: "
   cout << "TCPServer: message: " << message << endl;
@@ -167,7 +175,20 @@ bool TCPServer::processMessage(const string& message, string& response)
   response += message;
   // sleep(8);                    // sert uniquement a tester le verrou
   cout << "TCPServer:TCPServer response: " << response << endl;
-  
+  */
+
+  const string searchcmd = "search";
+  const string playcmd = "play";
+
+  if (command == searchcmd)
+    {
+      response = fs.search(arg);
+    }
+  else if (command == playcmd)
+    {
+      if (fs.play(arg)) response = "Playing";
+      else response = "Not found";
+    }
   
   // debloque le verrou (attention ne pas oublier cette ligne !)
   pthread_rwlock_unlock(&lock);

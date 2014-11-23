@@ -40,21 +40,25 @@ void MultFS::remove(const std::string& n)
   }
 }
 
-void MultFS::search(const std::string& n)
+std::string MultFS::search(const std::string& n) const
 {
-  objects_t::iterator obfound = objects.find(n);
-  groups_t::iterator gfound = groups.find(n);
+  objects_t::const_iterator obfound = objects.find(n);
+  groups_t::const_iterator gfound = groups.find(n);
 
-  if (obfound != objects.end()){ obfound->second->print(); }
+  if (obfound != objects.end()){ return obfound->second->toString(); }
 
-  if (gfound != groups.end()){ gfound->second->print(); }
+  if (gfound != groups.end()){ return gfound->second->toString(); }
+
+  return "No results";
 }
-void MultFS::play(const std::string& n)
+bool MultFS::play(const std::string& n) const
 {
-  objects_t::iterator obfound = objects.find(n);
-  groups_t::iterator gfound = groups.find(n);
+  objects_t::const_iterator obfound = objects.find(n);
+  groups_t::const_iterator gfound = groups.find(n);
 
-  if (obfound != objects.end()){ obfound->second->play(); }
+  if (obfound != objects.end()){ obfound->second->play(); return true; }
 
-  if (gfound != groups.end()){ gfound->second->play(); }
+  if (gfound != groups.end()){ gfound->second->play(); return true; }
+
+  return false;
 }

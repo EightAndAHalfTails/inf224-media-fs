@@ -8,7 +8,7 @@
 #define __TCPServer__
 #include <pthread.h>
 #include "Socket.h"
-
+#include "MultFS.h"
 
 /** TCPServer: TCP/IP INET Server.
  * This class supports TCP/IP AF_INET connections following the IPv4 Internet
@@ -45,6 +45,8 @@ protected:
 private: // disables copy.
   TCPServer(const TCPServer&);
   TCPServer& operator=(const TCPServer&);
+
+  MultFS fs;
 };
 
 

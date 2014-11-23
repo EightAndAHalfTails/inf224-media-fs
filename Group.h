@@ -22,6 +22,7 @@ public:
   virtual ~Group();
   const std::string& getName() const;
   void print() const;
+  std::string toString() const;
   void play() const;
 private:
   std::string name;
