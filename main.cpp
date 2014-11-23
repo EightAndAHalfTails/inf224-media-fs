@@ -6,13 +6,14 @@
 #include "Group.h"
 #include "intrusive_ptr.h"
 #include "MultFS.h"
+#include "TCPServer.h"
 #include <string>
 
 using namespace std;
 
 int main( int argc, const char* argv[] )
 {
-  typedef intrusive_ptr<BaseObject> MultObj;
+  /*typedef intrusive_ptr<BaseObject> MultObj;
   typedef intrusive_ptr<Group> MultGr;
 
 
@@ -38,9 +39,13 @@ int main( int argc, const char* argv[] )
   chaps[4] = 95;
 
   int dur = 0;
-  for(int i=0; i<cc; i++) dur += chaps[i];
+  for(int i=0; i<cc; i++) dur += chaps[i];*/
 
-  MultFS fs;
+  TCPServer serv;
+  const int port = 3331;
+  return serv.run(port);
+  
+  /*  MultFS fs;
 
   MultObj avpvg = fs.create(new Film("Alien vs Predator vs Godzilla", pasttime, "~/Films/film1", dur, cc, chaps));
   MultObj tdohs = fs.create(new Film("The Disappearance of Haruhi Suzumiya", time(NULL), "~/Films/film2", 8888));
@@ -53,5 +58,5 @@ int main( int argc, const char* argv[] )
   g->push_back(azu);
 
   fs.search("anime");
-  return 0;
+  return 0;*/
 }

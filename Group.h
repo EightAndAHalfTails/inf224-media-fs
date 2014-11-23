@@ -10,7 +10,7 @@
  * This class gives a way to assign Multimedia Objects to a group.
  */
 
-class Group: public std::list<intrusive_ptr<BaseObject>>, public Pointable
+class Group: public std::list<intrusive_ptr<BaseObject> >, public Pointable
 {
 public:
   //! Parameterless Constructor
