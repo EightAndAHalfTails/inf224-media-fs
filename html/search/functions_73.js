@@ -1,9 +1,27 @@
 var searchData=
 [
+  ['search',['search',['../classMultFS.html#a7cee8ae014447fb24cf1efd5a3024101',1,'MultFS']]],
+  ['send',['send',['../classSocket.html#a9275eacdb64056a53cf4b9cf54cd2f1a',1,'Socket']]],
+  ['sendto',['sendTo',['../classSocket.html#ac75e3ac80b7e6ae1bdce58c1c4e2b56a',1,'Socket']]],
+  ['serversocket',['ServerSocket',['../classServerSocket.html#a2b3098589541243241ca25495155186c',1,'ServerSocket']]],
+  ['setaddress',['setAddress',['../classSocket.html#aec683b1b0104aeae9fc2cfdbb6b70e9f',1,'Socket']]],
   ['setchapters',['setChapters',['../classFilm.html#ab0c2831b76a6b932dfc4a6facc38870c',1,'Film']]],
   ['setcreationdate',['setCreationDate',['../classBaseObject.html#aeeb327051d61bd727722f583fa0bc41c',1,'BaseObject']]],
   ['setduration',['setDuration',['../classVideo.html#a0fbbf03b902423efa2179142902bb0d0',1,'Video']]],
-  ['setname',['setName',['../classBaseObject.html#a3999488d0dd4e825641ece8f332385e1',1,'BaseObject']]],
-  ['setpath',['setPath',['../classBaseObject.html#a06461859fe33fc77fee0b74dbbe1b57d',1,'BaseObject']]],
-  ['setplace',['setPlace',['../classPhoto.html#ae835a7d23db2b2f6b90d1efaaf034959',1,'Photo']]]
+  ['setlocaladdress',['setLocalAddress',['../classSocket.html#ae098ebe2d34fac9947260f517ee8de04',1,'Socket']]],
+  ['setname',['setName',['../classBaseObject.html#a7d8dca471d4e0eb15620f518f48d2a8c',1,'BaseObject']]],
+  ['setoption',['setOption',['../classSocket.html#aede9a4b4ef00a7169f8eec1e75f1796d',1,'Socket::setOption()'],['../classServerSocket.html#ad69fa5c5891f028192a291044b9191e2',1,'ServerSocket::setOption()']]],
+  ['setpath',['setPath',['../classBaseObject.html#a7841749de25678d8cbedf021e760cbee',1,'BaseObject']]],
+  ['setplace',['setPlace',['../classPhoto.html#ae835a7d23db2b2f6b90d1efaaf034959',1,'Photo']]],
+  ['setreceivebuffersize',['setReceiveBufferSize',['../classSocket.html#a06ff0dd6837c9f51948df655fc2713cd',1,'Socket::setReceiveBufferSize()'],['../classServerSocket.html#ab34154bc6114c638ae02f5e018121099',1,'ServerSocket::setReceiveBufferSize()']]],
+  ['setreuseaddress',['setReuseAddress',['../classSocket.html#ab02b997fa7e251d596116e95c9ccaf97',1,'Socket::setReuseAddress()'],['../classServerSocket.html#ae60d7cc31ad535e5d3cac42e38b8ec98',1,'ServerSocket::setReuseAddress()']]],
+  ['setsendbuffersize',['setSendBufferSize',['../classSocket.html#afc49ad6cc259a0006ca13bb22fdd7383',1,'Socket']]],
+  ['setsolinger',['setSoLinger',['../classSocket.html#a41cc1caae51e3e83e16ce2c20689ed03',1,'Socket']]],
+  ['setsotimeout',['setSoTimeout',['../classSocket.html#ad65a22ec40902e2c0a98c5d4ac885f99',1,'Socket::setSoTimeout()'],['../classServerSocket.html#aedb9144c9c375fcb14ac47bcb9d2eb17',1,'ServerSocket::setSoTimeout()']]],
+  ['settcpnodelay',['setTcpNoDelay',['../classSocket.html#a7bc0110f3bedbb18f26b05ece01553fa',1,'Socket::setTcpNoDelay()'],['../classServerSocket.html#a9e5e1ee852ba26156c757a0086b780fe',1,'ServerSocket::setTcpNoDelay()']]],
+  ['shutdowninput',['shutdownInput',['../classSocket.html#a417b47af24de10184192de00d9112589',1,'Socket']]],
+  ['shutdownoutput',['shutdownOutput',['../classSocket.html#a650128aee2581e6695c6812d8afe14b5',1,'Socket']]],
+  ['socket',['Socket',['../classSocket.html#acd3cb39bc957be2f34c91b9e262e1cec',1,'Socket::Socket(int type=SOCK_STREAM)'],['../classSocket.html#a14170941ba1aaa3263f3e8dd3f85e24f',1,'Socket::Socket(int type, int sockfd)']]],
+  ['socketbuffer',['SocketBuffer',['../classSocketBuffer.html#ad726b4173f7bb35a76f45ce4efb87cb7',1,'SocketBuffer']]],
+  ['startreadmessages',['startReadMessages',['../classTCPServer.html#a42c2409be8cbdebb705966d42675440d',1,'TCPServer']]]
 ];
