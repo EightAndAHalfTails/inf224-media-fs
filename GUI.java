@@ -1,23 +1,30 @@
+import java.io.*;
+import java.net.*;
 import javax.swing.*;
 import java.awt.BorderLayout;
-import java.awt.event.*; 
+import java.awt.event.*;
 
 public class GUI extends JFrame
 {
     private static final long serialVersionUID = 1L;
 
-    JTextArea text = new JTextArea("Enter text...");
+    JTextArea text = new JTextArea("");
     JScrollPane textscroll = new JScrollPane(text);
     JPanel buttons = new JPanel();
-    JButton button1 = new JButton("Button 1");
-    JButton button2 = new JButton("Button 2");
-    JButton button3 = new JButton("Button 3");
+    JButton searchbutton = new JButton("Search");
+    JButton playbutton = new JButton("Play");
+    JButton readbutton = new JButton("Read");
+    JButton writebutton = new JButton("Write");
     JMenuBar menubar = new JMenuBar();
     JMenu menu = new JMenu("menu");
-    JMenuItem menuitem1 = new JMenuItem("Action 1");
-    JMenuItem menuitem2 = new JMenuItem("Action 2");
-    JMenuItem menuitem3 = new JMenuItem("Action 3");
+    JMenuItem searchitem = new JMenuItem("Search");
+    JMenuItem playitem = new JMenuItem("Play");
+    JMenuItem readitem = new JMenuItem("Read");
+    JMenuItem writeitem = new JMenuItem("Write");
+    JMenuItem closeitem = new JMenuItem("Quit");
     JToolBar toolbar = new JToolBar("toolbar");
+
+    Client client;
 
     public static void main(String args[])
     {
@@ -29,30 +36,48 @@ public class GUI extends JFrame
 	super(name);
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+
+	String host = Client.DEFAULT_HOST;
+	int port = Client.DEFAULT_PORT;
+
+	try{
+	    client = new Client(host, port);
+	}
+	catch (Exception e) {
+	    System.out.println("Client: couldn't connect: "+host+":"+port);
+	    System.exit(1);
+	}
+	
 	add(textscroll);
-	buttons.add(button1, BorderLayout.WEST);
-	buttons.add(button2);
-	buttons.add(button3, BorderLayout.EAST);	
+	buttons.add(searchbutton, BorderLayout.NORTH);
+	buttons.add(readbutton, BorderLayout.WEST);
+	buttons.add(writebutton, BorderLayout.EAST);	
+	buttons.add(playbutton, BorderLayout.SOUTH);	
 	add(buttons, BorderLayout.SOUTH);
 
-	button1.addActionListener(new AddTextAction1());
-	button2.addActionListener(new AddTextAction2());
-	button3.addActionListener(new CloseListener());
+	searchbutton.addActionListener(new SearchAction());
+	playbutton.addActionListener(new PlayAction());
+	readbutton.addActionListener(new ReadAction());
+	writebutton.addActionListener(new WriteAction());
 
-	menuitem1.addActionListener(new AddTextAction1());
-	menuitem2.addActionListener(new AddTextAction2());
-	menuitem3.addActionListener(new CloseListener());
+	searchitem.addActionListener(new SearchAction());
+	playitem.addActionListener(new PlayAction());
+	readitem.addActionListener(new ReadAction());
+	writeitem.addActionListener(new WriteAction());
+	closeitem.addActionListener(new CloseAction());
 
-	menu.add(menuitem1);
-	menu.add(menuitem2);
-	menu.add(menuitem3);
+	menu.add(searchitem);
+	menu.add(playitem);
+	menu.add(readitem);
+	menu.add(writeitem);
+	menu.add(closeitem);
 
-	toolbar.add(new AddTextAction1());
-	toolbar.add(new AddTextAction2());
-	toolbar.add(new CloseListener());
+	//toolbar.add(new AddTextAction1());
+	//toolbar.add(new AddTextAction2());
+	//toolbar.add(new CloseListener());
 
 	menubar.add(menu);
-	menubar.add(toolbar);
+	//menubar.add(toolbar);
 
 	setJMenuBar(menubar);
 
@@ -60,22 +85,44 @@ public class GUI extends JFrame
 	setVisible(true);
     }
 
-    //! Action to be performed when button 1 is pressed
-    private class AddTextAction1 extends AbstractAction { 
+    //! Action which sends a search request to the server
+    private class SearchAction extends AbstractAction { 
 	public void actionPerformed(ActionEvent e) { 
-	    text.append("You pressed button1\n"); 
+	    String name = JOptionPane.showInputDialog("Please enter a name to search");
+	    String response = client.send("search "+name);
+	    text.append(response+'\n');
 	} 
     } 
 
-    //! Action to be performed when button 2 is pressed
-    private class AddTextAction2 extends AbstractAction { 
+    //! Action which sends a play request to the server
+    private class PlayAction extends AbstractAction { 
 	public void actionPerformed(ActionEvent e) { 
-	    text.append("You pressed button2\n"); 
+	    String name = JOptionPane.showInputDialog("Please enter a name to play");
+	    String response = client.send("play "+name); 
+	    text.append(response+'\n');
+	}
+    }
+
+    //! Action which reads from text file
+    private class ReadAction extends AbstractAction { 
+	public void actionPerformed(ActionEvent e) { 
+	    String name = JOptionPane.showInputDialog("Please enter file to read from");
+	    String response = client.send("read "+name); 
+	    text.append(response+'\n');
+	} 
+    } 
+
+    //! Action which reads from text file
+    private class WriteAction extends AbstractAction { 
+	public void actionPerformed(ActionEvent e) { 
+	    String name = JOptionPane.showInputDialog("Please enter file to write to");
+	    String response = client.send("write "+name); 
+	    text.append(response+'\n');
 	} 
     } 
 
     //! Action to be performed when button 3 is pressed
-    private class CloseListener extends AbstractAction { 
+    private class CloseAction extends AbstractAction { 
 	public void actionPerformed(ActionEvent e) { 
 	    System.exit(0);
 	} 
