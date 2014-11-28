@@ -54,7 +54,7 @@ public class GUI extends JFrame
 	menubar.add(menu);
 	menubar.add(toolbar);
 
-	add(menubar, BorderLayout.NORTH);
+	setJMenuBar(menubar);
 
 	pack();
 	setVisible(true);
