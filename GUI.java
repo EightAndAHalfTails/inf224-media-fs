@@ -23,6 +23,10 @@ public class GUI extends JFrame
     JMenuItem writeitem = new JMenuItem("Write");
     JMenuItem closeitem = new JMenuItem("Quit");
     JToolBar toolbar = new JToolBar("toolbar");
+    JButton toolsearch = new JButton("");
+    JButton toolplay = new JButton("");
+    JButton toolread = new JButton("");
+    JButton toolwrite = new JButton("");
 
     Client client;
     String host = Client.DEFAULT_HOST;
@@ -70,12 +74,23 @@ public class GUI extends JFrame
 	menu.add(writeitem);
 	menu.add(closeitem);
 
-	//toolbar.add(new AddTextAction1());
-	//toolbar.add(new AddTextAction2());
-	//toolbar.add(new CloseListener());
+	toolsearch.addActionListener(new SearchAction());
+	toolplay.addActionListener(new PlayAction());
+	toolread.addActionListener(new ReadAction());
+	toolwrite.addActionListener(new WriteAction());
+
+	toolsearch.setIcon(new ImageIcon("./icons/find.gif"));
+	toolplay.setIcon(new ImageIcon("./icons/play.gif"));
+	toolread.setIcon(new ImageIcon("./icons/import.gif"));
+	toolwrite.setIcon(new ImageIcon("./icons/export.gif"));
+	
+	toolbar.add(toolsearch);
+	toolbar.add(toolplay);
+	toolbar.add(toolread);
+	toolbar.add(toolwrite);
 
 	menubar.add(menu);
-	//menubar.add(toolbar);
+	menubar.add(toolbar);
 
 	setJMenuBar(menubar);
 
