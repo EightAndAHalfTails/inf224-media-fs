@@ -60,7 +60,8 @@ TCPServer::TCPServer() : servsock() {
   MultFS::MultGr g = fs.create(new Group("anime"));
   g->push_back(tdohs);
   g->push_back(twin);
-  g->push_back(azu);*/
+  g->push_back(azu);
+  */
 }
 
 TCPServer::~TCPServer() {}

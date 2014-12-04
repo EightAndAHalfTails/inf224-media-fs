@@ -25,6 +25,8 @@ public class GUI extends JFrame
     JToolBar toolbar = new JToolBar("toolbar");
 
     Client client;
+    String host = Client.DEFAULT_HOST;
+    int port = Client.DEFAULT_PORT;
 
     public static void main(String args[])
     {
@@ -35,10 +37,6 @@ public class GUI extends JFrame
     {
 	super(name);
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
-	String host = Client.DEFAULT_HOST;
-	int port = Client.DEFAULT_PORT;
 
 	try{
 	    client = new Client(host, port);
@@ -105,8 +103,23 @@ public class GUI extends JFrame
 
     //! Action which reads from text file
     private class ReadAction extends AbstractAction { 
-	public void actionPerformed(ActionEvent e) { 
-	    String name = JOptionPane.showInputDialog("Please enter file to read from");
+	public void actionPerformed(ActionEvent e) {
+	    String name;
+	    if(host == "localhost")
+		{
+		    final JFileChooser fc = new JFileChooser();
+		    int returnVal = fc.showOpenDialog(GUI.this);
+		    if (returnVal == JFileChooser.APPROVE_OPTION) {
+			File file = fc.getSelectedFile();
+			name = file.getPath();// + file.getName();
+		    } else {
+			return;
+		    }
+		}
+	    else
+		{
+		    name = JOptionPane.showInputDialog("Please enter file to read from");
+		}
 	    String response = client.send("read "+name); 
 	    text.append(response+'\n');
 	} 
